@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="e71650161ba32d10c9c10d02604bcb0e" label="Movie" max_length="40" name="x_snc_movie_data_0_movie" type="collection">
+        <element label="Country" max_length="32" name="country" reference="core_country" type="reference"/>
+        <element label="Director" max_length="32" name="director" reference="x_snc_movie_data_0_person" type="reference"/>
+        <element choice="1" label="Genre" max_length="40" name="genre" type="glide_list">
+            <choice>
+                <element inactive_on_update="false" label="Action" sequence="0" value="Action"/>
+                <element inactive_on_update="false" label="Adventure" sequence="1" value="Adventure"/>
+                <element inactive_on_update="false" label="Comedy" sequence="2" value="Comedy"/>
+            </choice>
+        </element>
+        <element label="IMDB Rating" max_length="40" name="imdb_rating" type="float"/>
+        <element label="Language" max_length="32" name="language" reference="sys_language" type="reference"/>
+        <element label="Plot" max_length="1000" name="plot" type="string"/>
+        <element choice="1" label="Rated" max_length="40" name="rated" type="string">
+            <choice/>
+        </element>
+        <element label="Released" max_length="40" name="released" type="glide_date"/>
+        <element label="Runtime" max_length="40" name="runtime" type="glide_duration"/>
+        <element display="true" label="Title" max_length="250" name="title" type="string"/>
+        <element attributes="format=none" label="Year" max_length="40" name="year" type="integer"/>
+        <index name="index">
+            <element name="country"/>
+        </index>
+        <index name="index2">
+            <element name="director"/>
+        </index>
+        <index name="index3">
+            <element name="language"/>
+        </index>
+    </element>
+</database>

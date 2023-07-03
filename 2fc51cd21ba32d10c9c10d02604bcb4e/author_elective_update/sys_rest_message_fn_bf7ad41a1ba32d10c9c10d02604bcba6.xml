@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="DELETE">
+        <authentication_type>inherit_from_parent</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <content/>
+        <function_name>Default GET</function_name>
+        <http_method>get</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>OMDB API [ Default GET ]</qualified_name>
+        <rest_endpoint>http://www.omdbapi.com/</rest_endpoint>
+        <rest_message display_value="OMDB API">777ad41a1ba32d10c9c10d02604bcba5</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>daniel.draes</sys_created_by>
+        <sys_created_on>2023-06-22 13:27:14</sys_created_on>
+        <sys_id>bf7ad41a1ba32d10c9c10d02604bcba6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Default GET</sys_name>
+        <sys_package display_value="Movie Database" source="x_snc_movie_data_0">2fc51cd21ba32d10c9c10d02604bcb4e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_update_name>sys_rest_message_fn_bf7ad41a1ba32d10c9c10d02604bcba6</sys_update_name>
+        <sys_updated_by>daniel.draes</sys_updated_by>
+        <sys_updated_on>2023-06-22 13:27:14</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</application>
+        <file_path/>
+        <instance_id>f8fe9965dbaae450b847ac44d49619e4</instance_id>
+        <instance_name>empddraesdemo</instance_name>
+        <name>sys_rest_message_fn_bf7ad41a1ba32d10c9c10d02604bcba6</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn"><sys_rest_message_fn action="INSERT_OR_UPDATE"><authentication_type>inherit_from_parent</authentication_type><basic_auth_password/><basic_auth_profile/><basic_auth_user/><content/><function_name>Default GET</function_name><http_method>get</http_method><lock>false</lock><oauth2_profile/><protocol_name/><qualified_name>OMDB API [ Default GET ]</qualified_name><rest_endpoint>http://www.omdbapi.com/</rest_endpoint><rest_message display_value="OMDB API">777ad41a1ba32d10c9c10d02604bcba5</rest_message><sys_class_name>sys_rest_message_fn</sys_class_name><sys_created_by>daniel.draes</sys_created_by><sys_created_on>2023-06-22 13:27:14</sys_created_on><sys_id>bf7ad41a1ba32d10c9c10d02604bcba6</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Default GET</sys_name><sys_package display_value="Movie Database" source="x_snc_movie_data_0">2fc51cd21ba32d10c9c10d02604bcb4e</sys_package><sys_policy/><sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope><sys_update_name>sys_rest_message_fn_bf7ad41a1ba32d10c9c10d02604bcba6</sys_update_name><sys_updated_by>daniel.draes</sys_updated_by><sys_updated_on>2023-06-22 13:27:14</sys_updated_on><use_basic_auth>false</use_basic_auth><use_mid_server/><use_mutual_auth>false</use_mutual_auth></sys_rest_message_fn></record_update>]]></payload>
+        <payload_hash>179453677</payload_hash>
+        <record_name>Default GET</record_name>
+        <reverted_from/>
+        <source>afc51cd21ba32d10c9c10d02604bcb50</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>daniel.draes</sys_created_by>
+        <sys_created_on>2023-06-22 13:27:14</sys_created_on>
+        <sys_id>7f7ad81a1ba32d10c9c10d02604bcb03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>188e349a4bd0000001</sys_recorded_at>
+        <sys_updated_by>daniel.draes</sys_updated_by>
+        <sys_updated_on>2023-06-22 13:27:14</sys_updated_on>
+        <type>HTTP Method</type>
+        <update_guid>b37ad81a44a32d1031a7ab19dcaed703</update_guid>
+        <update_guid_history>b37ad81a44a32d1031a7ab19dcaed703:179453677</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>daniel.draes</sys_created_by>
+        <sys_created_on>2023-06-22 13:27:26</sys_created_on>
+        <sys_db_object display_value="" name="sys_rest_message_fn">sys_rest_message_fn</sys_db_object>
+        <sys_id>379c57cab5c14048ad85038a25a72640</sys_id>
+        <sys_metadata>bf7ad41a1ba32d10c9c10d02604bcba6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Default GET</sys_name>
+        <sys_package display_value="Movie Database" source="x_snc_movie_data_0">2fc51cd21ba32d10c9c10d02604bcb4e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_scope_delete display_value="">07ef745ee3f2403ab21f98ec1a74fb21</sys_scope_delete>
+        <sys_update_name>sys_rest_message_fn_bf7ad41a1ba32d10c9c10d02604bcba6</sys_update_name>
+        <sys_update_version display_value="sys_rest_message_fn_bf7ad41a1ba32d10c9c10d02604bcba6">7f7ad81a1ba32d10c9c10d02604bcb03</sys_update_version>
+        <sys_updated_by>daniel.draes</sys_updated_by>
+        <sys_updated_on>2023-06-22 13:27:26</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

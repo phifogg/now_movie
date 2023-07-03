@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_movie_data_0.OMDBAjaxHelper</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>OMDBAjaxHelper</name>
+        <script><![CDATA[var OMDBAjaxHelper = Class.create();
+OMDBAjaxHelper.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+	searchMovie: function() {
+		var search_title = this.getParameter('sysparm_searchtitle');
+		
+		var oh = new OMDBMovieHelper();
+		var result = oh.searchMovies(search_title);
+
+		return JSON.stringify(result);
+	},
+	
+    type: 'OMDBAjaxHelper'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>daniel.draes</sys_created_by>
+        <sys_created_on>2023-06-30 13:59:07</sys_created_on>
+        <sys_id>af6e6df81bfbe110c9c10d02604bcb81</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>OMDBAjaxHelper</sys_name>
+        <sys_package display_value="Movie Database" source="x_snc_movie_data_0">2fc51cd21ba32d10c9c10d02604bcb4e</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_update_name>sys_script_include_af6e6df81bfbe110c9c10d02604bcb81</sys_update_name>
+        <sys_updated_by>daniel.draes</sys_updated_by>
+        <sys_updated_on>2023-07-03 13:23:50</sys_updated_on>
+    </sys_script_include>
+</record_update>
