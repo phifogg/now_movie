@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_param_defs">
+    <sys_rest_message_fn_param_defs action="INSERT_OR_UPDATE">
+        <name>t</name>
+        <order>100</order>
+        <rest_message_function display_value="GET by Title">868301fd1b7f291013de99f1b24bcbc5</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_param_defs</sys_class_name>
+        <sys_created_by>daniel.draes</sys_created_by>
+        <sys_created_on>2023-07-03 13:26:39</sys_created_on>
+        <sys_id>98c389fd1b7f291013de99f1b24bcb62</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>t</sys_name>
+        <sys_package display_value="Movie Database" source="x_snc_movie_data_0">2fc51cd21ba32d10c9c10d02604bcb4e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_update_name>sys_rest_message_fn_param_defs_98c389fd1b7f291013de99f1b24bcb62</sys_update_name>
+        <sys_updated_by>daniel.draes</sys_updated_by>
+        <sys_updated_on>2023-07-03 13:26:39</sys_updated_on>
+        <value>${title}</value>
+    </sys_rest_message_fn_param_defs>
+</record_update>

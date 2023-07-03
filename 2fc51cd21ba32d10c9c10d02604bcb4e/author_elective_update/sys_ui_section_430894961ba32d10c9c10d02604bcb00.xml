@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section action="DELETE" caption="New section 1" section_id="430894961ba32d10c9c10d02604bcb00" sys_domain="global" table="x_snc_movie_data_0_movie" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>released</element>
+            <position>0</position>
+            <sys_created_by>daniel.draes</sys_created_by>
+            <sys_created_on>2023-06-22 13:17:33</sys_created_on>
+            <sys_id>064858961ba32d10c9c10d02604bcba9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New section 1" display_value="New section 1" name="x_snc_movie_data_0_movie" sys_domain="global" view="Default view">430894961ba32d10c9c10d02604bcb00</sys_ui_section>
+            <sys_updated_by>daniel.draes</sys_updated_by>
+            <sys_updated_on>2023-06-22 13:17:33</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>country</element>
+            <position>1</position>
+            <sys_created_by>daniel.draes</sys_created_by>
+            <sys_created_on>2023-06-22 13:17:33</sys_created_on>
+            <sys_id>864858961ba32d10c9c10d02604bcba9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New section 1" display_value="New section 1" name="x_snc_movie_data_0_movie" sys_domain="global" view="Default view">430894961ba32d10c9c10d02604bcb00</sys_ui_section>
+            <sys_updated_by>daniel.draes</sys_updated_by>
+            <sys_updated_on>2023-06-22 13:17:33</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>runtime</element>
+            <position>2</position>
+            <sys_created_by>daniel.draes</sys_created_by>
+            <sys_created_on>2023-06-22 13:17:33</sys_created_on>
+            <sys_id>0a4858961ba32d10c9c10d02604bcba9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New section 1" display_value="New section 1" name="x_snc_movie_data_0_movie" sys_domain="global" view="Default view">430894961ba32d10c9c10d02604bcb00</sys_ui_section>
+            <sys_updated_by>daniel.draes</sys_updated_by>
+            <sys_updated_on>2023-06-22 13:17:33</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>3</position>
+            <sys_created_by>daniel.draes</sys_created_by>
+            <sys_created_on>2023-06-22 13:17:33</sys_created_on>
+            <sys_id>8a4858961ba32d10c9c10d02604bcba9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New section 1" display_value="New section 1" name="x_snc_movie_data_0_movie" sys_domain="global" view="Default view">430894961ba32d10c9c10d02604bcb00</sys_ui_section>
+            <sys_updated_by>daniel.draes</sys_updated_by>
+            <sys_updated_on>2023-06-22 13:17:33</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>year</element>
+            <position>4</position>
+            <sys_created_by>daniel.draes</sys_created_by>
+            <sys_created_on>2023-06-22 13:17:33</sys_created_on>
+            <sys_id>0e4858961ba32d10c9c10d02604bcba9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New section 1" display_value="New section 1" name="x_snc_movie_data_0_movie" sys_domain="global" view="Default view">430894961ba32d10c9c10d02604bcb00</sys_ui_section>
+            <sys_updated_by>daniel.draes</sys_updated_by>
+            <sys_updated_on>2023-06-22 13:17:33</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>language</element>
+            <position>5</position>
+            <sys_created_by>daniel.draes</sys_created_by>
+            <sys_created_on>2023-06-22 13:17:33</sys_created_on>
+            <sys_id>8e4858961ba32d10c9c10d02604bcba9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New section 1" display_value="New section 1" name="x_snc_movie_data_0_movie" sys_domain="global" view="Default view">430894961ba32d10c9c10d02604bcb00</sys_ui_section>
+            <sys_updated_by>daniel.draes</sys_updated_by>
+            <sys_updated_on>2023-06-22 13:17:33</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>genre</element>
+            <position>6</position>
+            <sys_created_by>daniel.draes</sys_created_by>
+            <sys_created_on>2023-06-22 13:17:33</sys_created_on>
+            <sys_id>024858961ba32d10c9c10d02604bcbaa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New section 1" display_value="New section 1" name="x_snc_movie_data_0_movie" sys_domain="global" view="Default view">430894961ba32d10c9c10d02604bcb00</sys_ui_section>
+            <sys_updated_by>daniel.draes</sys_updated_by>
+            <sys_updated_on>2023-06-22 13:17:33</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="DELETE">
+            <caption>New section 1</caption>
+            <header>false</header>
+            <name>x_snc_movie_data_0_movie</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>daniel.draes</sys_created_by>
+            <sys_created_on>2023-06-22 13:16:32</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>430894961ba32d10c9c10d02604bcb00</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_snc_movie_data_0_movie</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Movie Database" source="x_snc_movie_data_0">2fc51cd21ba32d10c9c10d02604bcb4e</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+            <sys_update_name>sys_ui_section_430894961ba32d10c9c10d02604bcb00</sys_update_name>
+            <sys_updated_by>daniel.draes</sys_updated_by>
+            <sys_updated_on>2023-06-22 13:16:32</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</application>
+        <file_path/>
+        <instance_id>f8fe9965dbaae450b847ac44d49619e4</instance_id>
+        <instance_name>empddraesdemo</instance_name>
+        <name>sys_ui_section_430894961ba32d10c9c10d02604bcb00</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="New section 1" section_id="430894961ba32d10c9c10d02604bcb00" sys_domain="global" table="x_snc_movie_data_0_movie" version="3" view=""><sys_ui_element action="INSERT_OR_UPDATE"><element>released</element><position>0</position><sys_created_by>daniel.draes</sys_created_by><sys_created_on>2023-06-22 13:17:33</sys_created_on><sys_id>064858961ba32d10c9c10d02604bcba9</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="New section 1" display_value="New section 1" name="x_snc_movie_data_0_movie" sys_domain="global" view="Default view">430894961ba32d10c9c10d02604bcb00</sys_ui_section><sys_updated_by>daniel.draes</sys_updated_by><sys_updated_on>2023-06-22 13:17:33</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>country</element><position>1</position><sys_created_by>daniel.draes</sys_created_by><sys_created_on>2023-06-22 13:17:33</sys_created_on><sys_id>864858961ba32d10c9c10d02604bcba9</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="New section 1" display_value="New section 1" name="x_snc_movie_data_0_movie" sys_domain="global" view="Default view">430894961ba32d10c9c10d02604bcb00</sys_ui_section><sys_updated_by>daniel.draes</sys_updated_by><sys_updated_on>2023-06-22 13:17:33</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>runtime</element><position>2</position><sys_created_by>daniel.draes</sys_created_by><sys_created_on>2023-06-22 13:17:33</sys_created_on><sys_id>0a4858961ba32d10c9c10d02604bcba9</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="New section 1" display_value="New section 1" name="x_snc_movie_data_0_movie" sys_domain="global" view="Default view">430894961ba32d10c9c10d02604bcb00</sys_ui_section><sys_updated_by>daniel.draes</sys_updated_by><sys_updated_on>2023-06-22 13:17:33</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.split</element><position>3</position><sys_created_by>daniel.draes</sys_created_by><sys_created_on>2023-06-22 13:17:33</sys_created_on><sys_id>8a4858961ba32d10c9c10d02604bcba9</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="New section 1" display_value="New section 1" name="x_snc_movie_data_0_movie" sys_domain="global" view="Default view">430894961ba32d10c9c10d02604bcb00</sys_ui_section><sys_updated_by>daniel.draes</sys_updated_by><sys_updated_on>2023-06-22 13:17:33</sys_updated_on><sys_user/><type>.split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>year</element><position>4</position><sys_created_by>daniel.draes</sys_created_by><sys_created_on>2023-06-22 13:17:33</sys_created_on><sys_id>0e4858961ba32d10c9c10d02604bcba9</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="New section 1" display_value="New section 1" name="x_snc_movie_data_0_movie" sys_domain="global" view="Default view">430894961ba32d10c9c10d02604bcb00</sys_ui_section><sys_updated_by>daniel.draes</sys_updated_by><sys_updated_on>2023-06-22 13:17:33</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>language</element><position>5</position><sys_created_by>daniel.draes</sys_created_by><sys_created_on>2023-06-22 13:17:33</sys_created_on><sys_id>8e4858961ba32d10c9c10d02604bcba9</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="New section 1" display_value="New section 1" name="x_snc_movie_data_0_movie" sys_domain="global" view="Default view">430894961ba32d10c9c10d02604bcb00</sys_ui_section><sys_updated_by>daniel.draes</sys_updated_by><sys_updated_on>2023-06-22 13:17:33</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>genre</element><position>6</position><sys_created_by>daniel.draes</sys_created_by><sys_created_on>2023-06-22 13:17:33</sys_created_on><sys_id>024858961ba32d10c9c10d02604bcbaa</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="New section 1" display_value="New section 1" name="x_snc_movie_data_0_movie" sys_domain="global" view="Default view">430894961ba32d10c9c10d02604bcb00</sys_ui_section><sys_updated_by>daniel.draes</sys_updated_by><sys_updated_on>2023-06-22 13:17:33</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption>New section 1</caption><header>false</header><name>x_snc_movie_data_0_movie</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>daniel.draes</sys_created_by><sys_created_on>2023-06-22 13:16:32</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>430894961ba32d10c9c10d02604bcb00</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_snc_movie_data_0_movie</sys_name><sys_overrides/><sys_package display_value="Movie Database" source="x_snc_movie_data_0">2fc51cd21ba32d10c9c10d02604bcb4e</sys_package><sys_policy/><sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope><sys_update_name>sys_ui_section_430894961ba32d10c9c10d02604bcb00</sys_update_name><sys_updated_by>daniel.draes</sys_updated_by><sys_updated_on>2023-06-22 13:16:32</sys_updated_on><sys_user/><title>false</title><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+        <payload_hash>-1628611858</payload_hash>
+        <record_name>Movie</record_name>
+        <reverted_from/>
+        <source>afc51cd21ba32d10c9c10d02604bcb50</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>daniel.draes</sys_created_by>
+        <sys_created_on>2023-06-22 13:17:33</sys_created_on>
+        <sys_id>424858961ba32d10c9c10d02604bcbac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>188e340c7720000001</sys_recorded_at>
+        <sys_updated_by>daniel.draes</sys_updated_by>
+        <sys_updated_on>2023-06-22 13:17:33</sys_updated_on>
+        <type>Form Layout</type>
+        <update_guid>0a48589613a32d10e4fc0150d0b5f5ab</update_guid>
+        <update_guid_history>0a48589613a32d10e4fc0150d0b5f5ab:-1628611858,db0894963ca32d109283e8a8ddd05e70:1779112553</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>daniel.draes</sys_created_by>
+        <sys_created_on>2023-06-22 13:18:38</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_section">sys_ui_section</sys_db_object>
+        <sys_id>6fc74eeb66cf43faa1511530977c8629</sys_id>
+        <sys_metadata>430894961ba32d10c9c10d02604bcb00</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>New section 1</sys_name>
+        <sys_package display_value="Movie Database" source="x_snc_movie_data_0">2fc51cd21ba32d10c9c10d02604bcb4e</sys_package>
+        <sys_parent display_value="Movie Data 0 Movie">e71650161ba32d10c9c10d02604bcb0e</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_scope_delete display_value="">07ef745ee3f2403ab21f98ec1a74fb21</sys_scope_delete>
+        <sys_update_name>sys_ui_section_430894961ba32d10c9c10d02604bcb00</sys_update_name>
+        <sys_update_version display_value="sys_ui_section_430894961ba32d10c9c10d02604bcb00">424858961ba32d10c9c10d02604bcbac</sys_update_version>
+        <sys_updated_by>daniel.draes</sys_updated_by>
+        <sys_updated_on>2023-06-22 13:18:38</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

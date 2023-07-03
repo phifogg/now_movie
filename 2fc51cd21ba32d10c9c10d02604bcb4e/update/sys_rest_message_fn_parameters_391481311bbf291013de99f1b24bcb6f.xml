@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_parameters">
+    <sys_rest_message_fn_parameters action="INSERT_OR_UPDATE">
+        <name>title</name>
+        <rest_message_function display_value="Search by Title">03e38dfd1b7f291013de99f1b24bcbc2</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_parameters</sys_class_name>
+        <sys_created_by>daniel.draes</sys_created_by>
+        <sys_created_on>2023-07-03 13:27:51</sys_created_on>
+        <sys_id>391481311bbf291013de99f1b24bcb6f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>title</sys_name>
+        <sys_package display_value="Movie Database" source="x_snc_movie_data_0">2fc51cd21ba32d10c9c10d02604bcb4e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_update_name>sys_rest_message_fn_parameters_391481311bbf291013de99f1b24bcb6f</sys_update_name>
+        <sys_updated_by>daniel.draes</sys_updated_by>
+        <sys_updated_on>2023-07-03 13:27:51</sys_updated_on>
+        <type>string</type>
+        <value>Dune</value>
+    </sys_rest_message_fn_parameters>
+</record_update>

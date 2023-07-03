@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="3a771c561ba32d10c9c10d02604bcba4" label="Person" max_length="40" name="x_snc_movie_data_0_person" type="collection">
+        <element display="true" label="Name" max_length="40" name="name" type="string"/>
+        <element choice="1" label="Role" max_length="40" name="role" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Director" sequence="0" value="Director"/>
+                <element inactive_on_update="false" label="Actor" sequence="1" value="Actor"/>
+                <element inactive_on_update="false" label="Writer" sequence="2" value="Writer"/>
+            </choice>
+        </element>
+    </element>
+</database>
