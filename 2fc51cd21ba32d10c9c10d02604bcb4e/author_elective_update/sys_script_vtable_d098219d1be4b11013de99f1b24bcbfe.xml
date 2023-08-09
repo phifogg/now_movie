@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_vtable">
+    <sys_script_vtable action="DELETE">
+        <active>true</active>
+        <advanced>false</advanced>
+        <cache_isolation_level>USER</cache_isolation_level>
+        <cache_strategy>CACHE_BY_QUERY</cache_strategy>
+        <cache_ttl>0</cache_ttl>
+        <name>OMDB Movies</name>
+        <script><![CDATA[(function executeQuery(v_table, v_query) {
+    // Main API:
+    //    v_table.addRow({ ... }) - adds a row to the result set
+    
+    // There are also query helper methods
+    //    v_query.getEncodedQuery() - returns encoded querystring
+    //    v_query.getCondition(field) - returns encoded querystring for the given field (includes field name, operator, and value)
+    //    v_query.getParameter(field) - returns parameter for the given field (only includes value for equality conditions)
+    //    v_query.isGet() - returns whether the query is a single get by sys_id
+    //    v_query.getSysId() - returns parameter for sys_id field
+    //    v_query.isTextSearch() - returns whether the query contains a text query parameter
+    //    v_query.getTextSearch() - returns text search query parameter (internal field name 123TEXTQUERY321)
+    //    v_query.getFirstRowWanted() - returns the first row to include
+    //    v_query.getLastRowWanted() - returns the last row to include
+  
+    // Note: You must define sys_id for each row so that forms and lists for this table work properly
+     
+    // Your code goes here
+    // v_table.addRow({...})
+
+	var title = v_table.getParameter('title');
+		try {
+		var inputs = {};
+		inputs['title'] = title; // String 
+				
+		// Execute Synchronously: Run in foreground. Code snippet has access to outputs.
+		var result = sn_fd.FlowAPI.getRunner().action('x_snc_omdb_spoke.search_by_title').inForeground().withInputs(inputs).run();
+		var outputs = result.getOutputs();
+
+		// Get Outputs:
+		// Note: outputs can only be retrieved when executing synchronously.
+		var movies = outputs['movies']; // Array.Object
+
+
+		for (var i = 0; i < movies.length; i++) {
+			v_table.addRow({
+				title: movies.Title,
+				year: movies.Year,
+				imdb_id: movies.imdbID
+			});
+		}
+
+
+		
+	} catch (ex) {
+		var message = ex.getMessage();
+		gs.error(message);
+	}
+
+  })(v_table, v_query);]]></script>
+        <sys_class_name>sys_script_vtable</sys_class_name>
+        <sys_created_by>daniel.draes</sys_created_by>
+        <sys_created_on>2023-08-08 09:42:25</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d098219d1be4b11013de99f1b24bcbfe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>OMDB Movies</sys_name>
+        <sys_package display_value="Movie Database" source="x_snc_movie_data_0">2fc51cd21ba32d10c9c10d02604bcb4e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_update_name>sys_script_vtable_d098219d1be4b11013de99f1b24bcbfe</sys_update_name>
+        <sys_updated_by>daniel.draes</sys_updated_by>
+        <sys_updated_on>2023-08-08 09:42:25</sys_updated_on>
+        <table>x_snc_omdb_spoke_st_omdb_movie</table>
+    </sys_script_vtable>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</application>
+        <file_path/>
+        <instance_id>f8fe9965dbaae450b847ac44d49619e4</instance_id>
+        <instance_name>empddraesdemo</instance_name>
+        <name>sys_script_vtable_d098219d1be4b11013de99f1b24bcbfe</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_vtable"&gt;&lt;sys_script_vtable action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;advanced&gt;false&lt;/advanced&gt;&lt;cache_isolation_level&gt;USER&lt;/cache_isolation_level&gt;&lt;cache_strategy&gt;CACHE_BY_QUERY&lt;/cache_strategy&gt;&lt;cache_ttl&gt;0&lt;/cache_ttl&gt;&lt;name&gt;OMDB Movies&lt;/name&gt;&lt;script&gt;&lt;![CDATA[(function executeQuery(v_table, v_query) {
+    // Main API:
+    //    v_table.addRow({ ... }) - adds a row to the result set
+    
+    // There are also query helper methods
+    //    v_query.getEncodedQuery() - returns encoded querystring
+    //    v_query.getCondition(field) - returns encoded querystring for the given field (includes field name, operator, and value)
+    //    v_query.getParameter(field) - returns parameter for the given field (only includes value for equality conditions)
+    //    v_query.isGet() - returns whether the query is a single get by sys_id
+    //    v_query.getSysId() - returns parameter for sys_id field
+    //    v_query.isTextSearch() - returns whether the query contains a text query parameter
+    //    v_query.getTextSearch() - returns text search query parameter (internal field name 123TEXTQUERY321)
+    //    v_query.getFirstRowWanted() - returns the first row to include
+    //    v_query.getLastRowWanted() - returns the last row to include
+  
+    // Note: You must define sys_id for each row so that forms and lists for this table work properly
+     
+    // Your code goes here
+    // v_table.addRow({...})
+
+	var title = v_table.getParameter('title');
+		try {
+		var inputs = {};
+		inputs['title'] = title; // String 
+				
+		// Execute Synchronously: Run in foreground. Code snippet has access to outputs.
+		var result = sn_fd.FlowAPI.getRunner().action('x_snc_omdb_spoke.search_by_title').inForeground().withInputs(inputs).run();
+		var outputs = result.getOutputs();
+
+		// Get Outputs:
+		// Note: outputs can only be retrieved when executing synchronously.
+		var movies = outputs['movies']; // Array.Object
+
+
+		for (var i = 0; i &lt; movies.length; i++) {
+			v_table.addRow({
+				title: movies.Title,
+				year: movies.Year,
+				imdb_id: movies.imdbID
+			});
+		}
+
+
+		
+	} catch (ex) {
+		var message = ex.getMessage();
+		gs.error(message);
+	}
+
+  })(v_table, v_query);]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_vtable&lt;/sys_class_name&gt;&lt;sys_created_by&gt;daniel.draes&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-08-08 09:42:25&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;d098219d1be4b11013de99f1b24bcbfe&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;OMDB Movies&lt;/sys_name&gt;&lt;sys_package display_value="Movie Database" source="x_snc_movie_data_0"&gt;2fc51cd21ba32d10c9c10d02604bcb4e&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Movie Database"&gt;2fc51cd21ba32d10c9c10d02604bcb4e&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_vtable_d098219d1be4b11013de99f1b24bcbfe&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;daniel.draes&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-08-08 09:42:25&lt;/sys_updated_on&gt;&lt;table&gt;x_snc_omdb_spoke_st_omdb_movie&lt;/table&gt;&lt;/sys_script_vtable&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1030602280</payload_hash>
+        <record_name>OMDB Movies</record_name>
+        <reverted_from/>
+        <source>da7524411b60711013de99f1b24bcbf6</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>daniel.draes</sys_created_by>
+        <sys_created_on>2023-08-08 09:42:25</sys_created_on>
+        <sys_id>30c9a9dd1be4b11013de99f1b24bcbea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>189d486b4ff0000001</sys_recorded_at>
+        <sys_updated_by>daniel.draes</sys_updated_by>
+        <sys_updated_on>2023-08-08 09:42:25</sys_updated_on>
+        <type>Remote Table</type>
+        <update_guid>74c9a9dd7ce4b11033553d2f7669a8e9</update_guid>
+        <update_guid_history>74c9a9dd7ce4b11033553d2f7669a8e9:1030602280</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>daniel.draes</sys_created_by>
+        <sys_created_on>2023-08-08 09:43:50</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_vtable">sys_script_vtable</sys_db_object>
+        <sys_id>2ee8bf2853f74ff0b2b6a37ceee27100</sys_id>
+        <sys_metadata>d098219d1be4b11013de99f1b24bcbfe</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>OMDB Movies</sys_name>
+        <sys_package display_value="Movie Database" source="x_snc_movie_data_0">2fc51cd21ba32d10c9c10d02604bcb4e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_scope_delete display_value="">07ef745ee3f2403ab21f98ec1a74fb21</sys_scope_delete>
+        <sys_update_name>sys_script_vtable_d098219d1be4b11013de99f1b24bcbfe</sys_update_name>
+        <sys_update_version display_value="sys_script_vtable_d098219d1be4b11013de99f1b24bcbfe">30c9a9dd1be4b11013de99f1b24bcbea</sys_update_version>
+        <sys_updated_by>daniel.draes</sys_updated_by>
+        <sys_updated_on>2023-08-08 09:43:50</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
