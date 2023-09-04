@@ -151,4 +151,6 @@ function responseHandler(response) {
 
 This concludes the demo scenario. As you can see, it is stripped down to simple use cases. Real life integration scenarios in your environment are probably way more complex. It will still serve the purpose to highlight some techniques and patterns to revamp an your integration and transform it in a Integration Hub Spoke bases setup.
 
+If you want to follow this blog series in your own instance and checkout the application and artifacts, you can install the scoped application from the [Movie Database Github Repository](https://github.com/phifogg/now_movie). The repository contains a branch for each version as this series moves along. Feel free to fork and work with the material provided.
+
 Comment below if you feel I made a mistake in the scenario or if you have something which you feel is not covered in here but does need answer in such a move.
