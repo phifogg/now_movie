@@ -15,6 +15,8 @@ Blog post series:
 
 To explain the concepts and steps we need some examples. For this purpose I have crafted a custom application to manage movies in ServiceNow. Quite simple, an app with a table depicting some movie details. I used [App Engine Studio](https://www.servicenow.com/products/app-engine-studio.html) to create a new scoped application to host all artifacts required.
 
+**Note**: The application provided or created for this blog series does not intent to show good or best practice on how the classic web service integrations should be done, it rather focuses on examples we have seen at customers and uses them as to explain how to migrate. 
+
 Lets start by having a look at the data tables:
 
 ![AES Data Tables](blog1_images/aes_data_tables.png)
