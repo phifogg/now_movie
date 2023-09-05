@@ -1,6 +1,6 @@
 # How to migrate from scripted integration to Integration Hub
 
-If you are a ServiceNow customer for quite some years by now, you surely have integrated the platform with other systems in your company. Most likely you have used [web service integrations](https://docs.servicenow.com/bundle/utah-api-reference/page/integrate/web-services/reference/r_AvailableWebServices.html) leveraging SOAP or REST endpoints. While this works, ServiceNow offers newer and better capabilities as part of [Automation Engine](https://www.servicenow.com/products/automation-engine.html). This is the first blog of a series which will try to teach you how to migrate and what benefits you can expect doing so.
+ServiceNow instances love connecting with other systems. The tools to integrate have grown over the years from [web service integrations](https://docs.servicenow.com/bundle/utah-api-reference/page/integrate/web-services/reference/r_AvailableWebServices.html) leveraging SOAP or REST endpoints to newer and better capabilities as part of [Automation Engine](https://www.servicenow.com/products/automation-engine.html). This is the first blog of a series that will try to teach you how to migrate and what benefits you can expect by doing so.
 
 Blog post series:
 - [Blog 1](***URL***) This blog to outline the scenario
