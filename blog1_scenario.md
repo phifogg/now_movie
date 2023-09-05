@@ -57,7 +57,7 @@ This API works very similar to a search, with the difference that a result conta
 
 ### Get Movie Details for new Movie records
 
-Somehow we need to trigger our integration endpoints now when a new movie record is created. Traditionally this had to be Business Rules. For this I created an asnyc BR on insert and update to trigger everytime a title changes. This will then trigger my REST method _Get by Title_ to fetch the needed data. As a good developer I opted to put my code in a Script Include and have the BR call it. The BR script is therefor quick and easy:
+Somehow we need to trigger our integration endpoints when a new movie record is created. Traditionally this had to be Business Rules. For this I created an asnyc BR on insert and update to trigger everytime a title changes. This will then trigger my REST method _Get by Title_ to fetch the needed data. As a good developer I opted to put my code in a Script Include and have the BR call it. The BR script is therefor quick and easy:
 
 ```javascript
 	var oh = new OMDBMovieHelper();
