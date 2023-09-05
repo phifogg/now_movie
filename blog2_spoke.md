@@ -80,4 +80,108 @@ With the alias and connection created, we can move forward and create the Integr
 
     ![JSON Parser Setup: Generate target](blog2_images/JSON_Parser_generate.png)
 
-    If you remember from the first blog post, there are some elements recieved by OMDb which do not directly fit ServiceNow's data model.
+    If you remember from the first blog post, there are some date elements recieved by OMDb which do not directly fit ServiceNow's date format. We could leave the transformation to whoever uses the spoke action, but it would be a nice convenience factor if we cover it as part of the action. So let's add another step executing a transformation script. Click the **Plus (+)** again below *JSON Parser* and search for Script Step. This will allow to execute any arbitrary script either on the application server or even on a MID server if needed. In our case Instance is fine, all we need is access to the JSON body returned from the web service.
+
+    We already have the function needed in the OMDBMovieHelper Script Include from blog 1, using that script include though would create a dependency on the spoke to have our Movie application installed (Cross Scope Access Policy). Since we want our spoke to be self contained I'll copy the code to the script step here. In a later step we can them remove the function from the Movie application.
+
+    The script used is this:
+
+    ```JavaScript
+    (function execute(inputs, outputs) {
+  
+    // parses a date in format DD MMM YYYY, returns a GlideDateTime object
+    function parseDate(dateString) {
+            var dateParts = dateString.split(' ');
+            var day = dateParts[0];
+            var month = dateParts[1];
+            var year = dateParts[2];
+            var monthMap = {
+                'Jan': '01',
+                'Feb': '02',
+                'Mar': '03',
+                'Apr': '04',
+                'May': '05',
+                'Jun': '06',
+                'Jul': '07',
+                'Aug': '08',
+                'Sep': '09',
+                'Oct': '10',
+                'Nov': '11',
+                'Dec': '12'
+            };
+            var monthNumber = monthMap[month];
+            return year + '-' + monthNumber + '-' + day;
+        };
+
+  
+        var mvs = {
+	        Released: parseDate(inputs.movie_details.Released),
+ 	        DVD: parseDate(inputs.movie_details.DVD)
+        }
+  
+        outputs.movie_dates = mvs;
+  
+    })(inputs, outputs);
+    ```
+
+    The last bit is to define inputs and outputs for the script step:
+
+    ![Script Input](blog2_images/script_input.png)
+
+    ![Script Output](blog2_images/script_output.png)
+
+
+    With that the action as such is complete. The only missing element is defining the outputs for the whole action. Basically what this action returns to whomever calls it. Create two output parameters of type Object and one of type String, then map them as shown below. Notice, as you map the data pills, Flow Designer will inspect the object and generate all elements automatically for you. You can also get creative and define your own object and structure mapping to elements within rather then exposing the full objects received, similar to the JSON Parser step.
+
+    ![Action Outputs](blog2_images/action_output.png)
+
+    With that, test the action again and see how the returned information is transformed and exposed as outputs.
+
+1. Search by Title
+
+    This one is basically the same as *Get by Title* simplified. It does not require and date transformation and hence just needs a REST and a JSON Parser step. With the instructions above you should be able to build that one quickly on your own. If you want to explore the finished version, checkout the Git repository and branch *blog_2*.
+
+    TODO: Create branch in git and store objects linked to this blog step
+
+
+1. Replace scripted web service in Script Include
+
+    In the first blog post I introduced the Script Include *OMDBMovieHelper* which hosts all the logic to call the web services. We can simply replace these calls with calls to the Flow Designer Action. Flow Designer has the option to give us the needed stub code. Let's use the Get By Title one as an example. Open the action again in Flow Designer. 
+
+    Once the action is published, click on the context menu icon and select **Create code snippet**
+
+    ![Create code snippet](blog2_images/create_code_snippet.png)
+
+    This will generate all we need - there is even a Client version of the code if you need that. Copy the whole server content.
+
+    Now open the script include *OMDBMovieHelper* either in Developer Studio or classic UI and find the method *getOMDBData*. Paste the code snippet to the start of the function. Now we need to do some cleanup and data mapping to and from the Flow Action. The finalized script part replacing the WebService call looks like this:
+
+    ```JavaScript
+        getOMDBData(gr_movie) {
+
+        try {
+            var inputs = {};
+            inputs['title'] = gr_movie.title; // String 
+
+            // Execute Synchronously: Run in foreground. Code snippet has access to outputs.
+            var result = sn_fd.FlowAPI.getRunner().action('x_snc_omdb_spoke.get_by_title').inForeground().withInputs(inputs).run();
+            var outputs = result.getOutputs();
+
+            // Get Outputs:
+            // Note: outputs can only be retrieved when executing synchronously.
+            var movie_details = outputs['movie_details']; // Object
+            var movie_dates = outputs['movie_dates']; // Object
+            var http_status = outputs['http_status']; // String
+
+            if (http_status == '200') {
+
+                // extracting
+                gr_movie.year = movie_details.Year;
+                gr_movie.rated = movie_details.Rated;
+                gr_movie.plot = movie_details.Plot;
+                gr_movie.genre = movie_details.Genre;
+                gr_movie.imdb_rating = movie_details.imdbRating;
+                gr_movie.setValue('released', movie_dates.Released);
+    ```
+
+    This code is merely the same complexity as our old style Web Service Call, but it does leverage the new Integration Hub Spoke.
