@@ -1,5 +1,9 @@
 # How to migrate from scripted integration to Integration Hub
 
+<!--
+  Published URL: https://www.servicenow.com/community/automation-engine-blog/how-to-migrate-from-scripted-integration-to-integration-hub-part/ba-p/2675520
+-->
+
 ServiceNow instances love connecting with other systems. The tools to integrate have grown over the years from [web service integrations](https://docs.servicenow.com/bundle/utah-api-reference/page/integrate/web-services/reference/r_AvailableWebServices.html) leveraging SOAP or REST endpoints to newer and better capabilities as part of [Automation Engine](https://www.servicenow.com/products/automation-engine.html). This is the first blog of a series that will try to teach you how to migrate and what benefits you can expect by doing so.
 
 Blog post series:
@@ -66,7 +70,7 @@ Somehow we need to trigger our integration endpoints when a new movie record is 
 	oh.getOMDBData(current);
 ```
 
-The whole integration magic happens in the Script Include OMDBMovieHelper. I'll spare you from the full code, you can look at this in the github repository if you want. The essential part though is here:
+The whole integration magic happens in the Script Include OMDBMovieHelper. I'll spare you from the full code, you can look at this in the GitHub repository referenced in the summary of this page. The essential part though is here:
 
 ```javascript
             var r = new sn_ws.RESTMessageV2('OMDB API', 'GET by Title');
@@ -90,7 +94,7 @@ The whole integration magic happens in the Script Include OMDBMovieHelper. I'll 
 
 ```
 
-The script starts extracting the data after successfully retrieving it from the API. Most of it is straight forward, but some fields require extra care. In this case we have a date field containing the release date of the movie. As this does not come in a format ServiceNow understands, parsing and convertion requires some string manipulation. Other elements with extra care are reference fields where the correct reference record (sys_id) needs to be looked up. One example is the director of the movie. In the section above I illuted an extra table for persons. So the integration has to lookup values there and create a new record if not existing.
+The script starts extracting the data after successfully retrieving it from the API. Most of it is straight forward, but some fields require extra care. In this case we have a date field containing the release date of the movie. As this does not come in a format ServiceNow understands, parsing and conversion requires some string manipulation. Other elements with extra care are reference fields where the correct reference record (sys_id) needs to be looked up. One example is the director of the movie. In the section above I eluted an extra table for persons. So the integration has to lookup values there and create a new record if not existing.
 
 ```javascript
                     // find director
@@ -151,7 +155,7 @@ function responseHandler(response) {
 
 ### Summary
 
-This concludes the demo scenario. As you can see, it is stripped down to simple use cases. Real life integration scenarios in your environment are probably way more complex. It will still serve the purpose to highlight some techniques and patterns to revamp an your integration and transform it in a Integration Hub Spoke bases setup.
+This concludes the demo scenario. As you can see, it is stripped down to simple use cases. Real life integration scenarios in your environment are probably way more complex. It will still serve the purpose to highlight some techniques and patterns to revamp an your integration and transform it in a Integration Hub Spoke based setup.
 
 If you want to follow this blog series in your own instance and checkout the application and artifacts, you can install the scoped application from the [Movie Database Github Repository](https://github.com/phifogg/now_movie). The repository contains a branch for each version as this series moves along. Feel free to fork and work with the material provided.
 
