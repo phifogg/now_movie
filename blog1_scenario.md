@@ -7,7 +7,7 @@
 ServiceNow instances love connecting with other systems. The tools to integrate have grown over the years from [web service integrations](https://docs.servicenow.com/bundle/utah-api-reference/page/integrate/web-services/reference/r_AvailableWebServices.html) leveraging SOAP or REST endpoints to newer and better capabilities as part of [Automation Engine](https://www.servicenow.com/products/automation-engine.html). This is the first blog of a series that will try to teach you how to migrate and what benefits you can expect by doing so.
 
 Blog post series:
-- [Blog 1](***URL***) This blog to outline the scenario
+- [Blog 1](https://www.servicenow.com/community/automation-engine-blog/how-to-migrate-from-scripted-integration-to-integration-hub-part/ba-p/2675520) This blog to outline the scenario
 - [Blog 2](***URL***) _coming soon_: Replacing scripted web service with a custom spoke action
 - [Blog 3](***URL***) _coming soon_: Replacing scripted integration with Flow Designer
 - [Blog 4](***URL***) _coming soon_: Replacing Remote Table Script

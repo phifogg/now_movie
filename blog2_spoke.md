@@ -3,7 +3,7 @@
 This blog post is #2 in a series of posts where I show you how to migrate from a more traditionally implemented integration using scripted [web services](https://docs.servicenow.com/bundle/utah-api-reference/page/integrate/web-services/reference/r_AvailableWebServices.html) to a modern Flow and Integration Hub based one. In this post we will be replacing the scripted web service with a custom spoke but still use all the other scripts as before with only minor modifications to them.
 
 If you have not yet seen the other blog posts, please check them out here:
-- [Blog 1](***URL***) Introducing the scenario
+- [Blog 1](https://www.servicenow.com/community/automation-engine-blog/how-to-migrate-from-scripted-integration-to-integration-hub-part/ba-p/2675520) This blog to outline the scenario
 - [Blog 2](***URL***) Replacing scripted web service with a custom spoke action
 - [Blog 3](***URL***) _coming soon_: Replacing scripted integration with Flow Designer
 - [Blog 4](***URL***) _coming soon_: Replacing Remote Table Script
