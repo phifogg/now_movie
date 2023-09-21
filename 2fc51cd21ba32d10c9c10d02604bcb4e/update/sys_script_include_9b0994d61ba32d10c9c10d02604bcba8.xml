@@ -47,8 +47,8 @@ OMDBMovieHelper.prototype = {
 
             // Get Outputs:
             // Note: outputs can only be retrieved when executing synchronously.
-            var response = outputs['movies']; // String
-			var oResponse = JSON.parse(response);
+            var oResponse = outputs['movies']; // Object
+			//var oResponse = JSON.parse(response);
 			
             if (oResponse.Response == "True") {
                 for (var i = 0; i < oResponse.Search.length; i++) {
@@ -160,13 +160,13 @@ OMDBMovieHelper.prototype = {
         <sys_created_by>daniel.draes</sys_created_by>
         <sys_created_on>2023-06-22 13:21:34</sys_created_on>
         <sys_id>9b0994d61ba32d10c9c10d02604bcba8</sys_id>
-        <sys_mod_count>42</sys_mod_count>
+        <sys_mod_count>43</sys_mod_count>
         <sys_name>OMDBMovieHelper</sys_name>
         <sys_package display_value="Movie Database" source="x_snc_movie_data_0">2fc51cd21ba32d10c9c10d02604bcb4e</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
         <sys_update_name>sys_script_include_9b0994d61ba32d10c9c10d02604bcba8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-09-21 07:48:09</sys_updated_on>
+        <sys_updated_on>2023-09-21 08:15:07</sys_updated_on>
     </sys_script_include>
 </record_update>
