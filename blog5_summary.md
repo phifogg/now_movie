@@ -1,0 +1,2 @@
+- security on flows (run as, run with roles,....)
+- Execution Details when reporting is on
