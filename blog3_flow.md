@@ -1,4 +1,5 @@
-# Replacing scripted integration with Flow Designer
+# How to migrate from scripted integration to Integration Hub - Part 3
+
 
 This blog post is #3 in a series of posts where I show you how to migrate from a more traditionally implemented integration using scripted [web services](https://docs.servicenow.com/bundle/utah-api-reference/page/integrate/web-services/reference/r_AvailableWebServices.html) to a modern Flow and Integration Hub based one. In this post we will be replacing the all scripts from the scenario with low code elements of Flow Designer.
 
@@ -9,7 +10,9 @@ If you have not yet seen the other blog posts, please check them out here:
 - [Blog 4](***URL***) _coming soon_: Replacing Remote Table Script
 - [Blog 5](***URL***) _coming soon_: Summary and Benefits
 
-## Script Include
+## Replacing scripted integration with Flow Designer
+
+### Script Include
 
 Flow Designer and low code tools do not directly offer a concept of a Script Include to host multiple functions. What we can do is to create a subflow for each function of a script include and store these functions in a bespoke category - this is as close as it gets. Let's check out the Script Include part for retrieving data from OMDB.
 
@@ -32,7 +35,7 @@ Finally, when all data is available to the flow it is a simple mapping excercise
 ![Update Movie Record](blog3_images/UpdateMovieRecord.png)
 
 
-## The business rule
+### The business rule
 
 In blog post 1 I showed a business rule which is triggered when a new record is inserted into the movie table. Let's inspect this for some more details:
 
@@ -50,7 +53,7 @@ With the trigger sorted, all we need to do is to call the prepared subflow and p
 
 Finally, deactivate (or delete) the old Business Rule.
 
-## Testing
+### Testing
 
 As before, make sure that [Flow reporting](https://docs.servicenow.com/bundle/vancouver-build-workflows/page/administer/flow-designer/task/enable-flow-reporting.html) is turned on to see what is happening. This is anyhow a good idea for a development environment. With that, create a new Movie record or change an existing one and wait for the Flow to kick in and do its magic. It might take a few seconds like any asnychronous action. You can what the execution as it runs or after the fact from Flow Designer. In the flow, use the context menu and check for **Executions**.
 
@@ -58,7 +61,7 @@ As before, make sure that [Flow reporting](https://docs.servicenow.com/bundle/va
 
 You can even drill down to the called subflow and actions to follow every step.
 
-## Summary
+### Summary
 
 As you can see, building a flow is not more difficult than scripting your way. But it does offer more flexibility and easier maintenance going forward. Flow reporting is a great utility when it comes to debug issues with the flow execution. Like in the previous blog posts, if you want to follow along checkout the matching branch Blog3_flow in the [Movie Database Github Repository](https://github.com/phifogg/now_movie).
 
