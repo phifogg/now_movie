@@ -10,30 +10,6 @@
         <script><![CDATA[var OMDBMovieHelper = Class.create();
 OMDBMovieHelper.prototype = {
 
-    // parses a date in format DD MMM YYYY, returns a GlideDateTime object
-    parseDate(dateString) {
-        var dateParts = dateString.split(' ');
-        var day = dateParts[0];
-        var month = dateParts[1];
-        var year = dateParts[2];
-        var monthMap = {
-            'Jan': '01',
-            'Feb': '02',
-            'Mar': '03',
-            'Apr': '04',
-            'May': '05',
-            'Jun': '06',
-            'Jul': '07',
-            'Aug': '08',
-            'Sep': '09',
-            'Oct': '10',
-            'Nov': '11',
-            'Dec': '12'
-        };
-        var monthNumber = monthMap[month];
-        return new GlideDateTime(year + '-' + monthNumber + '-' + day);
-    },
-
     searchMovies(st_title) {
         try {
             var search_result = [];
@@ -46,7 +22,6 @@ OMDBMovieHelper.prototype = {
             var outputs = result.getOutputs();
 
             // Get Outputs:
-            // Note: outputs can only be retrieved when executing synchronously.
             var oResponse = outputs['movies']; // Object
 			//var oResponse = JSON.parse(response);
 			
@@ -160,13 +135,13 @@ OMDBMovieHelper.prototype = {
         <sys_created_by>daniel.draes</sys_created_by>
         <sys_created_on>2023-06-22 13:21:34</sys_created_on>
         <sys_id>9b0994d61ba32d10c9c10d02604bcba8</sys_id>
-        <sys_mod_count>43</sys_mod_count>
+        <sys_mod_count>44</sys_mod_count>
         <sys_name>OMDBMovieHelper</sys_name>
         <sys_package display_value="Movie Database" source="x_snc_movie_data_0">2fc51cd21ba32d10c9c10d02604bcb4e</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
         <sys_update_name>sys_script_include_9b0994d61ba32d10c9c10d02604bcba8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-09-21 08:15:07</sys_updated_on>
+        <sys_updated_on>2023-09-21 08:22:16</sys_updated_on>
     </sys_script_include>
 </record_update>
