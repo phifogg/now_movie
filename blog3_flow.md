@@ -60,4 +60,6 @@ You can even drill down to the called subflow and actions to follow every step.
 
 ## Summary
 
-As you can see, building a flow is not more difficult than scripting your way. But it does offer more flexibility and easier maintenance going forward. Flow reporting is a great utility when it comes to debug issues with the flow execution. Join me in the next blog post on replacing the search API with a remote table for even better usability.
+As you can see, building a flow is not more difficult than scripting your way. But it does offer more flexibility and easier maintenance going forward. Flow reporting is a great utility when it comes to debug issues with the flow execution. Like in the previous blog posts, if you want to follow along checkout the matching branch Blog3_flow in the [Movie Database Github Repository](https://github.com/phifogg/now_movie).
+
+Join me in the next blog post on replacing the search API with a remote table for even better usability. 
