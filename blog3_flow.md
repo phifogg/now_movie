@@ -16,21 +16,23 @@ If you have not yet seen the other blog posts, please check them out here:
 
 Flow Designer and low code tools do not directly offer a concept of a Script Include to host multiple functions. What we can do is to create a subflow for each function of a script include and store these functions in a bespoke category - this is as close as it gets. Let's check out the Script Include part for retrieving data from OMDB.
 
-In Blog Post 2 we have already updated the function _getOMDBData_ to use the spoke action instead of classic scripted web service API. Now we are taking it one step further by rebuilding the function as new subflow. SAubflows provide inputs and outputs, similar to a scripted funtion. In this example we only need an input record for the Movie:
+In Blog Post 2 we have already updated the function _getOMDBData_ to use the spoke action instead of classic scripted web service API. Now we are taking it one step further by rebuilding the function as new subflow. Subflows provide inputs and outputs, similar to a scripted function. In this example we only need an input record for the Movie:
 
 ![Subflow input](blog3_images/subflow_input.png)
 
-With that we can start rebuilding the script logic with Flow Designer. This is mostly a straight forward thing of replacing code with steps piece by piece. Lookups to find the Person our Country Record are easy to do in Flow Designer. In this case we can use the setting 'Don't fail on error' for the Look Up step which allows the flow to react and create a record if required. The flow also uses Flow Variables to keep track of found or created reference records so we know later on which one to store in the movie record.
+With that we can start rebuilding the script logic with Flow Designer. This is mostly a straight forward thing of replacing code with steps piece by piece. Lookups to find the Person or Country Record are easy to do in Flow Designer. In this case we can use the setting 'Don't fail on error' for the Look Up step which allows the flow to react and create a record if required. The flow also uses Flow Variables to keep track of found or created reference records so we know later on which one to store in the movie record.
 
 Here is a representation how the first part of the flow looks like rebuilt:
 
 ![Flow partly rebuilt](blog3_images/flow_partly_rebuilt.png)
 
-The lookup to sys_language poses an extra challenge as by default Flow Designer does not allow us to lookup records in certain system tables - including sys_language. For this we need to trick a little and create ourselves a new Action to script the lookup. Like in the second part of this series I created a new Action which uses a language string as input. With that a script step does exactly what the previous Script Include did and finally it returnes either they found or the newly created record.
+The lookup to sys_language poses an extra challenge as by default Flow Designer does not allow us to lookup records in certain system tables - including sys_language. For this we need to trick a little and create ourselves a new Action to script the lookup. Like in the second part of this series I created a new Action which uses a language string as input. With that a script step does exactly what the previous Script Include did and finally it returns either the found or the newly created record.
 
 ![Find or Create script step](blog3_images/FindLanguageAction.png)
 
-Finally, when all data is available to the flow it is a simple mapping excercise for all values to the right place in Update Record - again, very similar to the scripted mapping from before.
+>*Note*: It is fairly simple to use a script step in an Action. Technically you could have the whole script include function here and still rely on heavy scripting. While this might be an approach to gradually move over to Flow Designer, I do not recommend to put lengthy scripts here. They are not as easy to find and maintain going foward. Treat action step scripts more as trigger elements and have larger code blocks still in Script Includes.
+
+Finally, when all data is available to the flow it is a simple mapping exercise for all values to the right place in Update Record - again, very similar to the scripted mapping from before.
 
 ![Update Movie Record](blog3_images/UpdateMovieRecord.png)
 
@@ -41,11 +43,11 @@ In blog post 1 I showed a business rule which is triggered when a new record is 
 
 ![Business Rule Trigger](blog3_images/br_trigger.png)
 
-A quite classic or standard trigger definition, run asnychronously on Insert and Update when Title changes. A flow trigger can accomodate the exact same thing:
+A quite classic or standard trigger definition, run asynchronously on Insert and Update when Title changes. A flow trigger can accommodate the exact same thing:
 
 ![Flow Trigger](blog3_images/flow_trigger.png)
 
-Using a flow will also enable other features hardly available onn Business Rules like running the flow as the user triggering it (aka user initiating the session) or as system account. This is a very useful feature to keep your security inplace. Business Rules usually use GlideRecord API which uses a system context by default exposing functions which might not be available to the user regularly. You can even specify which roles have to be used when executing a flow, i'll talk a bit more on that in the last blog post.
+Using a flow will also enable other features hardly available on Business Rules like running the flow as the user triggering it (aka user initiating the session) or as system account. This is a very useful feature to keep your security in place. Business Rules usually use GlideRecord API which uses a system context by default potentially exposing data which might not be available to the user regularly. You can even specify which roles have to be used when executing a flow, i'll talk a bit more on that in the last blog post.
 
 With the trigger sorted, all we need to do is to call the prepared subflow and pass in the triggering record.
 
@@ -55,7 +57,7 @@ Finally, deactivate (or delete) the old Business Rule.
 
 ### Testing
 
-As before, make sure that [Flow reporting](https://docs.servicenow.com/bundle/vancouver-build-workflows/page/administer/flow-designer/task/enable-flow-reporting.html) is turned on to see what is happening. This is anyhow a good idea for a development environment. With that, create a new Movie record or change an existing one and wait for the Flow to kick in and do its magic. It might take a few seconds like any asnychronous action. You can what the execution as it runs or after the fact from Flow Designer. In the flow, use the context menu and check for **Executions**.
+As before, make sure that [Flow reporting](https://docs.servicenow.com/bundle/vancouver-build-workflows/page/administer/flow-designer/task/enable-flow-reporting.html) is turned on to see what is happening. This is anyhow a good idea for a development environment. With that, create a new Movie record or change an existing one and wait for the Flow to kick in and do its magic. It might take a few seconds like any asynchronous action. You can see the execution as it runs or after the fact from Flow Designer. In the flow, use the context menu and check for **Executions**.
 
 ![Flow Execution](blog3_images/flow_execution.png)
 
