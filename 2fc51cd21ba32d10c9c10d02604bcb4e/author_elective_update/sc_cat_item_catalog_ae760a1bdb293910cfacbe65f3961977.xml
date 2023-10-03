@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog">
+    <sc_cat_item_catalog action="DELETE">
+        <sc_cat_item display_value="Copy of New Find a Movie">92760a1bdb293910cfacbe65f3961973</sc_cat_item>
+        <sc_catalog display_value="Service Catalog">e0d08b13c3330100c8b837659bba8fb4</sc_catalog>
+        <sys_class_name>sc_cat_item_catalog</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-10-03 09:58:29</sys_created_on>
+        <sys_id>ae760a1bdb293910cfacbe65f3961977</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Service Catalog.Copy of New Find a Movie</sys_name>
+        <sys_package display_value="Movie Database" source="x_snc_movie_data_0">2fc51cd21ba32d10c9c10d02604bcb4e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_update_name>sc_cat_item_catalog_ae760a1bdb293910cfacbe65f3961977</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-10-03 09:58:29</sys_updated_on>
+    </sc_cat_item_catalog>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</application>
+        <file_path/>
+        <instance_id>c86c4d7d096cc5046999ba291c5ee6f6</instance_id>
+        <instance_name>empddraes</instance_name>
+        <name>sc_cat_item_catalog_ae760a1bdb293910cfacbe65f3961977</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog"><sc_cat_item_catalog action="INSERT_OR_UPDATE"><sc_cat_item display_value="Copy of New Find a Movie">92760a1bdb293910cfacbe65f3961973</sc_cat_item><sc_catalog display_value="Service Catalog">e0d08b13c3330100c8b837659bba8fb4</sc_catalog><sys_class_name>sc_cat_item_catalog</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-10-03 09:58:29</sys_created_on><sys_id>ae760a1bdb293910cfacbe65f3961977</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Service Catalog.Copy of New Find a Movie</sys_name><sys_package display_value="Movie Database" source="x_snc_movie_data_0">2fc51cd21ba32d10c9c10d02604bcb4e</sys_package><sys_policy/><sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope><sys_update_name>sc_cat_item_catalog_ae760a1bdb293910cfacbe65f3961977</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-10-03 09:58:29</sys_updated_on></sc_cat_item_catalog></record_update>]]></payload>
+        <payload_hash>1677875221</payload_hash>
+        <record_name>Service Catalog.Copy of New Find a Movie</record_name>
+        <reverted_from/>
+        <source>78ba39fedb11fd10cfacbe65f39619ec</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-10-03 09:58:29</sys_created_on>
+        <sys_id>26760a1bdb293910cfacbe65f396197b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18af4f98d1b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-10-03 09:58:29</sys_updated_on>
+        <type>Catalog Items Catalog</type>
+        <update_guid>6a760a1bc6293910adfdbac0efeaa27a</update_guid>
+        <update_guid_history>6a760a1bc6293910adfdbac0efeaa27a:1677875221</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Service Catalog.Copy of New Find a Movie">b986ca1bdb293910cfacbe65f3961963</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-10-03 09:58:43</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_catalog">sc_cat_item_catalog</sys_db_object>
+        <sys_id>5bd9a4841e364c8c87f74dac002aeff1</sys_id>
+        <sys_metadata>ae760a1bdb293910cfacbe65f3961977</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Service Catalog.Copy of New Find a Movie</sys_name>
+        <sys_package display_value="Movie Database" source="x_snc_movie_data_0">2fc51cd21ba32d10c9c10d02604bcb4e</sys_package>
+        <sys_parent display_value="">92760a1bdb293910cfacbe65f3961973</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_scope_delete display_value="">07ef745ee3f2403ab21f98ec1a74fb21</sys_scope_delete>
+        <sys_update_name>sc_cat_item_catalog_ae760a1bdb293910cfacbe65f3961977</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_catalog_ae760a1bdb293910cfacbe65f3961977">26760a1bdb293910cfacbe65f396197b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-10-03 09:58:43</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
