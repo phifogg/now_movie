@@ -1,5 +1,8 @@
 # How to migrate from scripted integration to Integration Hub - Part 3
 
+<!-- Published URL
+https://www.servicenow.com/community/automation-engine-blog/how-to-migrate-from-scripted-integration-to-integration-hub-part/ba-p/2681339
+-->
 
 This blog post is #3 in a series of posts where I show you how to migrate from a more traditionally implemented integration using scripted [web services](https://docs.servicenow.com/bundle/utah-api-reference/page/integrate/web-services/reference/r_AvailableWebServices.html) to a modern Flow and Integration Hub based one. In this post we will be replacing the all scripts from the scenario with low code elements of Flow Designer.
 

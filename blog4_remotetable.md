@@ -1,5 +1,8 @@
 # How to migrate from scripted integration to Integration Hub - Part 4
 
+<!-- Published URL
+https://www.servicenow.com/community/automation-engine-blog/how-to-migrate-from-scripted-integration-to-integration-hub-part/ba-p/2689736
+-->
 
 This blog post is #4 in a series of posts where I show you how to migrate from a more traditionally implemented integration using scripted [web services](https://docs.servicenow.com/bundle/utah-api-reference/page/integrate/web-services/reference/r_AvailableWebServices.html) to a modern Flow and Integration Hub based one. In this post we will be replacing a scripted search with a Remote Table configuration.
 
@@ -26,7 +29,7 @@ With that said, let's create a new table to define the structure of the data we 
 
 The API does return information like Title, Year and OMDb-ID which we want to use here. You could add more fields to the table, but these are the ones I chose:
 
-To create this structure you need to use the navigator menu **Remote Tables -> Tables**. It will create the sßame entries in sys_db_object and sys_dictionary as you know from regular tables with one difference. The table will be flagged as *Remote Table*, a field you typically do not see on the form.
+To create this structure you need to use the navigator menu **Remote Tables -> Tables**. It will create the same entries in sys_db_object and sys_dictionary as you know from regular tables with one difference. The table will be flagged as *Remote Table*, a field you typically do not see on the form.
 
 ![Remote Table structure](blog4_images/movie_table.png)
 
@@ -36,7 +39,7 @@ I do recommend to activate *Create module* while creating the table. This will a
 
 With the table structure defined we need to tell the system how to find the data whenever somebody looks at this table. For this go to **Remote Tables -> Definition**.
 
-As you can see, the definition is basically a script which will pull in the data. You could use the previous Script Include leveraging the scripted Web Services or the newer method of an Integration Hub Action. The difinition script has access to two objects:
+As you can see, the definition is basically a script which will pull in the data. You could use the previous Script Include leveraging the scripted Web Services or the newer method of an Integration Hub Action. The definition script has access to two objects:
 
 | Object | Description | API Documentation |
 | ------ | ----- | ------|
@@ -50,9 +53,11 @@ You can get as creative and complicated as needed with parsing the query and for
 
     var title = v_query.getParameter('title');
     var title_query = v_query.getCondition('title');
-    title_query = title_query.split('LIKE');
-    if (title_query.length > 1) {
-        title = title_query[1];
+    if (!gs.nil(title_query)) {
+        title_query = title_query.split('LIKE');
+        if (title_query.length > 1) {
+            title = title_query[1];
+        }
     }
 
     try {
