@@ -97,5 +97,22 @@ Everytime you trigger a search, you will also be able to find an execution conte
 
 Depending on your Flow Reporting settings you can drill into any of these and see inputs, outputs and all intermediate steps. If something didn't work, start here with you trouble shooting.
 
-### Catalog Item
+## Catalog Item
 
+I introduced a record producer in Blog 1 to help users creating a new movie record. For this part of the blog I created another record producer to highlight how a remote table can be used here.
+
+Have a look at the **New Find a Movie** record producer. This time only one variable is exposed which is of type reference pointing to the newly created Remote Table. When this record producer opens, there is no record in the Movie table, hence the reference field does not auto-complete any records. If we open the search and enter a search query like * *Star Wars*, the query is executed and results show. We can than simply select one and click submit.
+
+![New Search Catalog Item](blog4_images/new_movie_search.png)
+
+I used a similar trick as before by populating a second variable with the selected movie title. The second variable is hidden as the user doesn't need to worry about it. All it does is serve as kind of a scratchpad to store the title string. This is required as the server side script executed by the record producer does not have access to the same content in the Remote Table as the user. All it would receive is the sys_id of the remote table.
+
+The little workaround using an extra variable could be avoided by a few extra steps:
+1. Create a new field on Movie table to store the ODMb ID
+1. Create a new spoke aciton to get movie details by OMDb ID instead of title
+1. Instead of using the hidden variable to store the movie title, map the reference field to the OMDb-ID field created above
+1. Change the flow triggering on new movie records to watch for ID changes instead of title
+
+## Summary
+
+Remote Tables provide a powerful and easy way to surface data from 3rd party systems in real time. While they can be used with traditional web services, we do recommend to pair them with Integration Hub Actions. The implementation effort is similarly small and allows a greater flexibility when it comes to maintenance. I'll talk more about the benefits in the next blog.
