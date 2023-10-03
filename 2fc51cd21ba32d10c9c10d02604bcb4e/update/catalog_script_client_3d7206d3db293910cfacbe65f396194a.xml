@@ -25,10 +25,8 @@
 
     //Type appropriate comment here, and begin script below
     g_form.clearOptions('title');
-
-	jslog('Movie value is: ' + g_form.getValue('movie'));
 	
-//    g_form.addOption('title', g_form.getValue('movie'), resultJSON[i].title);
+    g_form.addOption('title', g_form.getDisplayBox('movie').value, g_form.getDisplayBox('movie').value);
 
 }
 
@@ -40,7 +38,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>3d7206d3db293910cfacbe65f396194a</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Populate movie choices</sys_name>
         <sys_overrides/>
         <sys_package display_value="Movie Database" source="x_snc_movie_data_0">2fc51cd21ba32d10c9c10d02604bcb4e</sys_package>
@@ -48,7 +46,7 @@
         <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
         <sys_update_name>catalog_script_client_3d7206d3db293910cfacbe65f396194a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-10-03 10:18:28</sys_updated_on>
+        <sys_updated_on>2023-10-03 10:28:21</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>0</ui_type>
