@@ -3,7 +3,7 @@
 <!-- Published URL
 -->
 
-This blog post is #5 in a series of posts where I show you how to migrate from a more traditionally implemented integration using scripted [web services](https://docs.servicenow.com/bundle/utah-api-reference/page/integrate/web-services/reference/r_AvailableWebServices.html) to a modern Flow and Integration Hub based one. In this post I will summarize what we have achieved and what the benefits are including some resources to take this further.
+This blog post is #5 - and the last - in a series of posts where I show you how to migrate from a more traditionally implemented integration using scripted [web services](https://docs.servicenow.com/bundle/utah-api-reference/page/integrate/web-services/reference/r_AvailableWebServices.html) to a modern Flow and Integration Hub based one. In this post I will summarize what we have achieved and what the benefits are including some resources to take this further.
 
 If you have not yet seen the other blog posts, please check them out here:
 - [Blog 1](https://www.servicenow.com/community/automation-engine-blog/how-to-migrate-from-scripted-integration-to-integration-hub-part/ba-p/2675520) Outline of the scenario
@@ -75,11 +75,38 @@ This allows from a very granular control at specific integration steps up to com
 
 ### Monitoring
 
+Monitoring is a crucial part for any integration. Most of the times an API based integration will work just fine, and that is why we spend so much time at implementation stage to make it resilient. But what happens on the day things break? I already mentioned the debugging and trouble shooting part, to get there we need to know something went wrong.
+
+IntegrationHub comes with a dashboard delivering lots of information about all your integrations passing through it. 
+
+![IHub Dashboard](blog5_images/IHubDashboard.png)
+
+Here is one screenshot providing an overview of the load passing through InegrationHub, it will allow to drill down into specific spokes or actions, days of a week, protocols used etc. Another metric is successful vs. failing transactions.
+
+The number of transactions is an important metric as ServiceNow charges for IntegrationHub usage based on it. Some customers and partners are concered about this claiming it is an intransparent or unsafe pricing model. While I understand this concern, I believe it is one of the pricing models more transparent and clearly defined than in other places of the platform. The packages sold contain in the smallest paied SKU already 1 million transactions per year - this equals to 2 transaction every minute, 24x7x365. When you acutally reach this volume I would bet you do get easily the ROI for your investment.
+
+## Pre-built spokes
+
+While the whole blog series is focused on building a custom spoke to replace a scripted API, you should before building a a custom spoke check the [list of available spokes](https://docs.servicenow.com/csh?topicname=spokes-list.html&version=latest) and see if there is something available already. Chances are high that with 170+ spokes available - all in the same licence package, no extra fees - there is one matching your need. ServiceNow delivers spokes in basically two flavours:
+
+- most spokes can be seen as a toolset providing access to API functions of 3rd party service via Actions in Flow Designer. You will still need to build out the process layer ontop to make it do what you need. A good example is the Jira spoke, once installed it will do nothing until you start implementing the needed flows to trigger data exchange to Jira. But it does provide a set of actions like *Create Issue*, *Upload Attachment* etc. speeding up your implementation significantly.
+- some spokes come with fully fletched out processes, e.g. Password Reset for AD. In this case the plugin will bring all needed functionality as a kind of turn-key solution.
+
+If there is no spoke available from ServiceNow, make sure to also check the [ServiceNow Store](https://store.servicenow.com/), partners do provide spokes for additional applications. Note: These might incur an extra licence fee.
 
 
+## Further resources
 
+[Product Documentation](https://docs.servicenow.com/bundle/vancouver-integrate-applications/page/administer/integrationhub/concept/integrationhub.html)
 
-- security on flows (run as, run with roles,....)
-- Execution Details when reporting is on
+[Workflow Automation Center of Excellen](https://www.servicenow.com/community/workflow-automation-articles/workflow-automation-center-of-excellence/ta-p/2359889)
 
-- Instead of directly updating record use transform map?
+A great collection of material around all workflow automation tools.
+
+[IntegrationHub Fundamentals](https://nowlearning.servicenow.com/lxp/en/automation-engine/integration-hub-fundamentals?id=learning_path_prev&path_id=329ac7201bbafcd4a5e699b1b24bcbef)
+
+Fundamentals training course on NowLearning teaching all the basics of using IntegrationHub and building your own spokes.
+
+[HowTo Integration Hub](https://www.youtube.com/watch?v=zWwOpJX0Kwg)
+
+Community video talking about the value of IntegrationHub and how to achieve it.
