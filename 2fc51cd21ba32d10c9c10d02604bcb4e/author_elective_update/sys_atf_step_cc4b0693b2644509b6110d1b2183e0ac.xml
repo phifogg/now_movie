@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="DELETE">
+        <active>false</active>
+        <callable_outputs/>
+        <copied_from/>
+        <description>Log: dashboard not shared</description>
+        <display_name>Log</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>2</order>
+        <step_config display_value="Log">58ab71985f30220012b44adb7f46661e</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>daniel.draes</sys_created_by>
+        <sys_created_on>2025-02-11 16:19:14</sys_created_on>
+        <sys_id>cc4b0693b2644509b6110d1b2183e0ac</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Log</sys_name>
+        <sys_package display_value="Movie Database" source="x_snc_movie_data_0">2fc51cd21ba32d10c9c10d02604bcb4e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_update_name>sys_atf_step_cc4b0693b2644509b6110d1b2183e0ac</sys_update_name>
+        <sys_updated_by>daniel.draes</sys_updated_by>
+        <sys_updated_on>2025-02-11 16:19:43</sys_updated_on>
+        <table/>
+        <test display_value="Report and Dashboard Visibility Test">dbdb595901464b70b7c965598382c769</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="DELETE" query="document_key=cc4b0693b2644509b6110d1b2183e0ac"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>cc4b0693b2644509b6110d1b2183e0ac</document_key>
+        <order/>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>daniel.draes</sys_created_by>
+        <sys_created_on>2025-02-11 16:19:14</sys_created_on>
+        <sys_id>4579baa741244caab282678e327937fc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daniel.draes</sys_updated_by>
+        <sys_updated_on>2025-02-11 16:19:14</sys_updated_on>
+        <value>dashboard not shared</value>
+        <variable display_value="Log">523c79985f30220012b44adb7f46663a</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="table=var__m_atf_input_variable_58ab71985f30220012b44adb7f46661e^id=cc4b0693b2644509b6110d1b2183e0ac"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</application>
+        <file_path/>
+        <instance_id>c86c4d7d096cc5046999ba291c5ee6f6</instance_id>
+        <instance_name>empddraes</instance_name>
+        <name>sys_atf_step_cc4b0693b2644509b6110d1b2183e0ac</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step"><sys_atf_step action="INSERT_OR_UPDATE"><active>false</active><callable_outputs/><copied_from/><description>Log: dashboard not shared</description><display_name>Log</display_name><inputs/><mugshots_cache_json/><notes/><order>2</order><step_config display_value="Log">58ab71985f30220012b44adb7f46661e</step_config><sys_class_name>sys_atf_step</sys_class_name><sys_created_by>daniel.draes</sys_created_by><sys_created_on>2025-02-11 16:19:14</sys_created_on><sys_id>cc4b0693b2644509b6110d1b2183e0ac</sys_id><sys_mod_count>6</sys_mod_count><sys_name>Log</sys_name><sys_package display_value="Movie Database" source="x_snc_movie_data_0">2fc51cd21ba32d10c9c10d02604bcb4e</sys_package><sys_policy/><sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope><sys_update_name>sys_atf_step_cc4b0693b2644509b6110d1b2183e0ac</sys_update_name><sys_updated_by>daniel.draes</sys_updated_by><sys_updated_on>2025-02-11 16:19:43</sys_updated_on><table/><test display_value="Report and Dashboard Visibility Test">dbdb595901464b70b7c965598382c769</test><timeout/><warning_message/></sys_atf_step><sys_variable_value action="delete_multiple" query="document_key=cc4b0693b2644509b6110d1b2183e0ac"/><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>cc4b0693b2644509b6110d1b2183e0ac</document_key><order/><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>daniel.draes</sys_created_by><sys_created_on>2025-02-11 16:19:14</sys_created_on><sys_id>4579baa741244caab282678e327937fc</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>daniel.draes</sys_updated_by><sys_updated_on>2025-02-11 16:19:14</sys_updated_on><value>dashboard not shared</value><variable display_value="Log">523c79985f30220012b44adb7f46663a</variable></sys_variable_value><sys_element_mapping action="delete_multiple" query="table=var__m_atf_input_variable_58ab71985f30220012b44adb7f46661e^id=cc4b0693b2644509b6110d1b2183e0ac"/></record_update>]]></payload>
+        <payload_hash>929982360</payload_hash>
+        <record_name>Log</record_name>
+        <reverted_from/>
+        <source>22d6024287a392103f91ed740cbb3526</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>daniel.draes</sys_created_by>
+        <sys_created_on>2025-02-11 16:19:44</sys_created_on>
+        <sys_id>b0ebba9b87671a103f91ed740cbb35c4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194f5cf31160000001</sys_recorded_at>
+        <sys_updated_by>daniel.draes</sys_updated_by>
+        <sys_updated_on>2025-02-11 16:19:44</sys_updated_on>
+        <type>Test Step</type>
+        <update_guid>b4ebba9bc4671a10d3d4a743c03aeac3</update_guid>
+        <update_guid_history>b4ebba9bc4671a10d3d4a743c03aeac3:929982360,6cebba9b99671a1013a4261da250deb0:-1100131815,82cb3a9b10671a10989d558855d29c6f:1164721306,42cb3a9b44671a10b030845989db645b:-1280600095,21cbf69b12671a10e8a93f53c91bdbfc:-852428555</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>daniel.draes</sys_created_by>
+        <sys_created_on>2025-02-11 16:19:44</sys_created_on>
+        <sys_db_object display_value="" name="sys_atf_step">sys_atf_step</sys_db_object>
+        <sys_id>29436f52a7864aa48fa090a19581a1b1</sys_id>
+        <sys_metadata>cc4b0693b2644509b6110d1b2183e0ac</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Log</sys_name>
+        <sys_package display_value="Movie Database" source="x_snc_movie_data_0">2fc51cd21ba32d10c9c10d02604bcb4e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_scope_delete display_value="">07ef745ee3f2403ab21f98ec1a74fb21</sys_scope_delete>
+        <sys_update_name>sys_atf_step_cc4b0693b2644509b6110d1b2183e0ac</sys_update_name>
+        <sys_update_version display_value="sys_atf_step_cc4b0693b2644509b6110d1b2183e0ac">b0ebba9b87671a103f91ed740cbb35c4</sys_update_version>
+        <sys_updated_by>daniel.draes</sys_updated_by>
+        <sys_updated_on>2025-02-11 16:19:44</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

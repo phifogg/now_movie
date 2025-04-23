@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="one_api_service_plan_feature">
+    <one_api_service_plan_feature action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applicability_condition/>
+        <applicability_condition_expression/>
+        <applicability_condition_table/>
+        <applicability_script><![CDATA[(function(currentInputs, context) {
+    /* @param {Object} currentInputs - Inputs provided for the current step.*/
+    /* @param {Object} context - Execution context, which may include:*/
+    /*						   - Previous tool outputs/inputs (e.g., context['ToolName.attributeName'] or context.getValue('ToolName.attributeName')).*/
+    /*						   - Additional context information (e.g., context.getAllValues()).*/
+    /* @returns {Boolean} - Return 'true' if the condition is met; otherwise 'false'.*/
+    return true;
+})(currentInputs, context);]]></applicability_script>
+        <applicability_type>script</applicability_type>
+        <delay_output_processing>false</delay_output_processing>
+        <depends_on/>
+        <depends_on_list/>
+        <error_policy>continue_service_plan_execution</error_policy>
+        <feature display_value="fb03979e7f821210014a56ab1d866508">58bb769b87671a103f91ed740cbb353b</feature>
+        <return_request>false</return_request>
+        <service_plan display_value="___$y$t3m_bu1163r___-fb03979e7f821210014a56ab1d866508-default">d4bb769b87671a103f91ed740cbb3543</service_plan>
+        <sys_class_name>one_api_service_plan_feature</sys_class_name>
+        <sys_created_by>daniel.draes</sys_created_by>
+        <sys_created_on>2025-02-11 16:18:53</sys_created_on>
+        <sys_id>94bb769b87671a103f91ed740cbb3546</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>___$y$t3m_bu1163r___-fb03979e7f821210014a56ab1d866508-default: fb03979e7f821210014a56ab1d866508</sys_name>
+        <sys_package display_value="Movie Database" source="x_snc_movie_data_0">2fc51cd21ba32d10c9c10d02604bcb4e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_update_name>one_api_service_plan_feature_94bb769b87671a103f91ed740cbb3546</sys_update_name>
+        <sys_updated_by>daniel.draes</sys_updated_by>
+        <sys_updated_on>2025-02-11 16:18:53</sys_updated_on>
+        <timeout_policy>continue_service_plan_execution</timeout_policy>
+        <timeout_sec>60</timeout_sec>
+    </one_api_service_plan_feature>
+</record_update>

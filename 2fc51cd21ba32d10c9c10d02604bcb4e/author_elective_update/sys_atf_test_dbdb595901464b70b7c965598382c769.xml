@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_test">
+    <sys_atf_test action="DELETE">
+        <active>false</active>
+        <copied_from/>
+        <description>Test to check report visibility and dashboard sharing permissions</description>
+        <enable_parameterized_testing>false</enable_parameterized_testing>
+        <fail_on_server_error>true</fail_on_server_error>
+        <name>Report and Dashboard Visibility Test</name>
+        <parameters/>
+        <remember/>
+        <sn_atf_tg_generated>false</sn_atf_tg_generated>
+        <sys_class_name>sys_atf_test</sys_class_name>
+        <sys_created_by>daniel.draes</sys_created_by>
+        <sys_created_on>2025-02-11 16:19:14</sys_created_on>
+        <sys_id>dbdb595901464b70b7c965598382c769</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Report and Dashboard Visibility Test</sys_name>
+        <sys_package display_value="Movie Database" source="x_snc_movie_data_0">2fc51cd21ba32d10c9c10d02604bcb4e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_update_name>sys_atf_test_dbdb595901464b70b7c965598382c769</sys_update_name>
+        <sys_updated_by>daniel.draes</sys_updated_by>
+        <sys_updated_on>2025-02-11 16:19:16</sys_updated_on>
+        <test_origin>now_assist</test_origin>
+    </sys_atf_test>
+    <sys_variable_value action="DELETE" query="document_key=dbdb595901464b70b7c965598382c769"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</application>
+        <file_path/>
+        <instance_id>c86c4d7d096cc5046999ba291c5ee6f6</instance_id>
+        <instance_name>empddraes</instance_name>
+        <name>sys_atf_test_dbdb595901464b70b7c965598382c769</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_test"><sys_atf_test action="INSERT_OR_UPDATE"><active>false</active><copied_from/><description>Test to check report visibility and dashboard sharing permissions</description><enable_parameterized_testing>false</enable_parameterized_testing><fail_on_server_error>true</fail_on_server_error><name>Report and Dashboard Visibility Test</name><parameters/><remember/><sn_atf_tg_generated>false</sn_atf_tg_generated><sys_class_name>sys_atf_test</sys_class_name><sys_created_by>daniel.draes</sys_created_by><sys_created_on>2025-02-11 16:19:14</sys_created_on><sys_id>dbdb595901464b70b7c965598382c769</sys_id><sys_mod_count>2</sys_mod_count><sys_name>Report and Dashboard Visibility Test</sys_name><sys_package display_value="Movie Database" source="x_snc_movie_data_0">2fc51cd21ba32d10c9c10d02604bcb4e</sys_package><sys_policy/><sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope><sys_update_name>sys_atf_test_dbdb595901464b70b7c965598382c769</sys_update_name><sys_updated_by>daniel.draes</sys_updated_by><sys_updated_on>2025-02-11 16:19:16</sys_updated_on><test_origin>now_assist</test_origin></sys_atf_test><sys_variable_value action="delete_multiple" query="document_key=dbdb595901464b70b7c965598382c769"/></record_update>]]></payload>
+        <payload_hash>1199395985</payload_hash>
+        <record_name>Report and Dashboard Visibility Test</record_name>
+        <reverted_from/>
+        <source>22d6024287a392103f91ed740cbb3526</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>daniel.draes</sys_created_by>
+        <sys_created_on>2025-02-11 16:19:16</sys_created_on>
+        <sys_id>8acb3a9b87671a103f91ed740cbb3563</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194f5cec6370000001</sys_recorded_at>
+        <sys_updated_by>daniel.draes</sys_updated_by>
+        <sys_updated_on>2025-02-11 16:19:16</sys_updated_on>
+        <type>Test</type>
+        <update_guid>0ecb3a9bbd671a10003e8fa80665aa62</update_guid>
+        <update_guid_history>0ecb3a9bbd671a10003e8fa80665aa62:1199395985,35cb3a9be5671a106fcc496da2f9804c:801429354,e1cb3a9bc0671a10f26f664955bf4c00:-1863226109</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>daniel.draes</sys_created_by>
+        <sys_created_on>2025-02-11 16:19:44</sys_created_on>
+        <sys_db_object display_value="" name="sys_atf_test">sys_atf_test</sys_db_object>
+        <sys_id>9a30dfcd5a404b60aea40ecaab84e610</sys_id>
+        <sys_metadata>dbdb595901464b70b7c965598382c769</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Report and Dashboard Visibility Test</sys_name>
+        <sys_package display_value="Movie Database" source="x_snc_movie_data_0">2fc51cd21ba32d10c9c10d02604bcb4e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_scope_delete display_value="">07ef745ee3f2403ab21f98ec1a74fb21</sys_scope_delete>
+        <sys_update_name>sys_atf_test_dbdb595901464b70b7c965598382c769</sys_update_name>
+        <sys_update_version display_value="sys_atf_test_dbdb595901464b70b7c965598382c769">8acb3a9b87671a103f91ed740cbb3563</sys_update_version>
+        <sys_updated_by>daniel.draes</sys_updated_by>
+        <sys_updated_on>2025-02-11 16:19:44</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
