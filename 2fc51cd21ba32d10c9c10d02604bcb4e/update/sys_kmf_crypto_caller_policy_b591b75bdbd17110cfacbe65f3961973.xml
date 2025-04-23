@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_kmf_crypto_caller_policy">
+    <sys_kmf_crypto_caller_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <approval_type/>
+        <check_script_hash>false</check_script_hash>
+        <crypto_module display_value="com_snc_core_automation_glideencrypter">bddc8db07722201099808d11681061bc</crypto_module>
+        <crypto_spec display_value="com_snc_core_automation_glideencrypter --- Symmetric Key Wrapping/Unwrapping">71dc8db07722201099808d11681061be</crypto_spec>
+        <granular_operation/>
+        <identity_group_alias/>
+        <impersonation>false</impersonation>
+        <instance_recipient/>
+        <owner>c86c4d7d096cc5046999ba291c5ee6f6</owner>
+        <policy_name>AutoGen-scope-x_snc_movie_data_0-global.com_snc_core_automation_glideencrypter</policy_name>
+        <result>track</result>
+        <script_hash/>
+        <script_table/>
+        <signature_data/>
+        <specify_purpose>false</specify_purpose>
+        <sys_class_name>sys_kmf_crypto_caller_policy</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-21 07:30:47</sys_created_on>
+        <sys_id>b591b75bdbd17110cfacbe65f3961973</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Movie Database" source="x_snc_movie_data_0">2fc51cd21ba32d10c9c10d02604bcb4e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_update_name>sys_kmf_crypto_caller_policy_b591b75bdbd17110cfacbe65f3961973</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-21 07:30:47</sys_updated_on>
+        <target_role/>
+        <target_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</target_scope>
+        <target_script/>
+        <type>3</type>
+        <used>false</used>
+    </sys_kmf_crypto_caller_policy>
+</record_update>

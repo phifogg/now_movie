@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="DELETE">
+        <active>false</active>
+        <callable_outputs/>
+        <copied_from/>
+        <description>Impersonate the user:  with user Id: null</description>
+        <display_name>Impersonate</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>1</order>
+        <step_config display_value="Impersonate">071ee5b253331200040729cac2dc348d</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>daniel.draes</sys_created_by>
+        <sys_created_on>2025-02-11 16:19:14</sys_created_on>
+        <sys_id>bdd4935b932647f3858982555a7cb3a9</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Impersonate</sys_name>
+        <sys_package display_value="Movie Database" source="x_snc_movie_data_0">2fc51cd21ba32d10c9c10d02604bcb4e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_update_name>sys_atf_step_bdd4935b932647f3858982555a7cb3a9</sys_update_name>
+        <sys_updated_by>daniel.draes</sys_updated_by>
+        <sys_updated_on>2025-02-11 16:19:16</sys_updated_on>
+        <table/>
+        <test display_value="Report and Dashboard Visibility Test">dbdb595901464b70b7c965598382c769</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="DELETE" query="document_key=bdd4935b932647f3858982555a7cb3a9"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>bdd4935b932647f3858982555a7cb3a9</document_key>
+        <order/>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>daniel.draes</sys_created_by>
+        <sys_created_on>2025-02-11 16:19:14</sys_created_on>
+        <sys_id>ab1484803f2c459abc3c883d77dd4f6e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>daniel.draes</sys_updated_by>
+        <sys_updated_on>2025-02-11 16:19:14</sys_updated_on>
+        <value/>
+        <variable display_value="User">586e2c4253e0220002c6435723dc3415</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="table=var__m_atf_input_variable_071ee5b253331200040729cac2dc348d^id=bdd4935b932647f3858982555a7cb3a9"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</application>
+        <file_path/>
+        <instance_id>c86c4d7d096cc5046999ba291c5ee6f6</instance_id>
+        <instance_name>empddraes</instance_name>
+        <name>sys_atf_step_bdd4935b932647f3858982555a7cb3a9</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step"><sys_atf_step action="INSERT_OR_UPDATE"><active>false</active><callable_outputs/><copied_from/><description>Impersonate the user:  with user Id: null</description><display_name>Impersonate</display_name><inputs/><mugshots_cache_json/><notes/><order>1</order><step_config display_value="Impersonate">071ee5b253331200040729cac2dc348d</step_config><sys_class_name>sys_atf_step</sys_class_name><sys_created_by>daniel.draes</sys_created_by><sys_created_on>2025-02-11 16:19:14</sys_created_on><sys_id>bdd4935b932647f3858982555a7cb3a9</sys_id><sys_mod_count>2</sys_mod_count><sys_name>Impersonate</sys_name><sys_package display_value="Movie Database" source="x_snc_movie_data_0">2fc51cd21ba32d10c9c10d02604bcb4e</sys_package><sys_policy/><sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope><sys_update_name>sys_atf_step_bdd4935b932647f3858982555a7cb3a9</sys_update_name><sys_updated_by>daniel.draes</sys_updated_by><sys_updated_on>2025-02-11 16:19:16</sys_updated_on><table/><test display_value="Report and Dashboard Visibility Test">dbdb595901464b70b7c965598382c769</test><timeout/><warning_message/></sys_atf_step><sys_variable_value action="delete_multiple" query="document_key=bdd4935b932647f3858982555a7cb3a9"/><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>bdd4935b932647f3858982555a7cb3a9</document_key><order/><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>daniel.draes</sys_created_by><sys_created_on>2025-02-11 16:19:14</sys_created_on><sys_id>ab1484803f2c459abc3c883d77dd4f6e</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>daniel.draes</sys_updated_by><sys_updated_on>2025-02-11 16:19:14</sys_updated_on><value/><variable display_value="User">586e2c4253e0220002c6435723dc3415</variable></sys_variable_value><sys_element_mapping action="delete_multiple" query="table=var__m_atf_input_variable_071ee5b253331200040729cac2dc348d^id=bdd4935b932647f3858982555a7cb3a9"/></record_update>]]></payload>
+        <payload_hash>-1997339193</payload_hash>
+        <record_name>Impersonate</record_name>
+        <reverted_from/>
+        <source>22d6024287a392103f91ed740cbb3526</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>daniel.draes</sys_created_by>
+        <sys_created_on>2025-02-11 16:19:16</sys_created_on>
+        <sys_id>8ecb3a9b87671a103f91ed740cbb356b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194f5cec6bf0000001</sys_recorded_at>
+        <sys_updated_by>daniel.draes</sys_updated_by>
+        <sys_updated_on>2025-02-11 16:19:16</sys_updated_on>
+        <type>Test Step</type>
+        <update_guid>82cb3a9bed671a10da90cdfb9afe9f6b</update_guid>
+        <update_guid_history>82cb3a9bed671a10da90cdfb9afe9f6b:-1997339193,cacb3a9b49671a10c966ec4604543456:-2020501298,61cbf69b6e671a10c24af2a14c3060fa:1835635551</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>daniel.draes</sys_created_by>
+        <sys_created_on>2025-02-11 16:19:43</sys_created_on>
+        <sys_db_object display_value="" name="sys_atf_step">sys_atf_step</sys_db_object>
+        <sys_id>9fd1b827b1124f80976ef7158f264000</sys_id>
+        <sys_metadata>bdd4935b932647f3858982555a7cb3a9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Impersonate</sys_name>
+        <sys_package display_value="Movie Database" source="x_snc_movie_data_0">2fc51cd21ba32d10c9c10d02604bcb4e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_scope_delete display_value="">07ef745ee3f2403ab21f98ec1a74fb21</sys_scope_delete>
+        <sys_update_name>sys_atf_step_bdd4935b932647f3858982555a7cb3a9</sys_update_name>
+        <sys_update_version display_value="sys_atf_step_bdd4935b932647f3858982555a7cb3a9">8ecb3a9b87671a103f91ed740cbb356b</sys_update_version>
+        <sys_updated_by>daniel.draes</sys_updated_by>
+        <sys_updated_on>2025-02-11 16:19:43</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

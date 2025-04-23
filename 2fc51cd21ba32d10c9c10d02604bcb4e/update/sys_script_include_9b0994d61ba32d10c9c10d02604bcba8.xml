@@ -10,142 +10,118 @@
         <script><![CDATA[var OMDBMovieHelper = Class.create();
 OMDBMovieHelper.prototype = {
 
-    // parses a date in format DD MMM YYYY, returns a GlideDateTime object
-    parseDate(dateString) {
-        var dateParts = dateString.split(' ');
-        var day = dateParts[0];
-        var month = dateParts[1];
-        var year = dateParts[2];
-        var monthMap = {
-            'Jan': '01',
-            'Feb': '02',
-            'Mar': '03',
-            'Apr': '04',
-            'May': '05',
-            'Jun': '06',
-            'Jul': '07',
-            'Aug': '08',
-            'Sep': '09',
-            'Oct': '10',
-            'Nov': '11',
-            'Dec': '12'
-        };
-        var monthNumber = monthMap[month];
-        return new GlideDateTime(year + '-' + monthNumber + '-' + day);
-    },
-
     searchMovies(st_title) {
         try {
-            var r = new sn_ws.RESTMessageV2('OMDB API', 'Search by Title');
-            r.setStringParameterNoEscape('title', st_title);
+            var search_result = [];
 
-            var response = r.execute();
-            var responseBody = response.getBody();
-            var httpStatus = response.getStatusCode();
+            var inputs = {};
+            inputs['title'] = st_title; // String 
 
-            var result = [];
-            if (httpStatus == '200') {
-                var oResponse = JSON.parse(responseBody);
-                gs.info('Search response: ' + responseBody);
+            // Execute Synchronously: Run in foreground. Code snippet has access to outputs.
+            var result = sn_fd.FlowAPI.getRunner().action('x_snc_omdb_spoke.search_by_title').inForeground().withInputs(inputs).run();
+            var outputs = result.getOutputs();
 
-                if (oResponse.Response == "True") {
-                    for (var i = 0; i < oResponse.Search.length; i++) {
-                        var movie = {
-                            title: oResponse.Search[i].Title,
-                            id: oResponse.Search[i].imdbID
-                        };
-                        result.push(movie);
-                    }
+            // Get Outputs:
+            var oResponse = outputs['movies']; // Object
+			//var oResponse = JSON.parse(response);
+			
+            if (oResponse.Response == "True") {
+                for (var i = 0; i < oResponse.Search.length; i++) {
+                    var movie = {
+                        title: oResponse.Search[i].Title,
+                        id: oResponse.Search[i].imdbID
+                    };
+                    search_result.push(movie);
                 }
-            }
+            } 
+			
         } catch (ex) {
             var message = ex.message;
+			gs.error(message);
         }
-		return result;
+        return search_result;
     },
 
     getOMDBData(gr_movie) {
         try {
-            var r = new sn_ws.RESTMessageV2('OMDB API', 'GET by Title');
-            r.setStringParameterNoEscape('title', gr_movie.title);
+            var inputs = {};
+            inputs['title'] = gr_movie.title; // String 
 
-            var response = r.execute();
-            var responseBody = response.getBody();
-            var httpStatus = response.getStatusCode();
-            gs.info('DD: Status code is: ' + httpStatus + ' Body: ' + responseBody);
+            // Execute Synchronously: Run in foreground. Code snippet has access to outputs.
+            var result = sn_fd.FlowAPI.getRunner().action('x_snc_omdb_spoke.get_by_title').inForeground().withInputs(inputs).run();
+            var outputs = result.getOutputs();
 
-            if (httpStatus == '200') {
-                var oResponse = JSON.parse(responseBody);
-                if (oResponse.Response == "True") {
-                    gs.info('Got positive result, extracting information form body');
+            // Get Outputs:
+            // Note: outputs can only be retrieved when executing synchronously.
+            var movie_details = outputs['movie_details']; // Object
+            var movie_dates = outputs['movie_dates']; // Object
+            var http_status = outputs['http_status']; // String
 
-                    // extracting
-                    gr_movie.year = oResponse.Year;
-                    gr_movie.rated = oResponse.Rated;
-                    gr_movie.plot = oResponse.Plot;
-                    gr_movie.genre = oResponse.Genre;
-                    gr_movie.imdb_rating = oResponse.imdbRating;
-                    gr_movie.setValue('released', this.parseDate(oResponse.Released));
+            if (http_status == '200') {
 
-                    // find director
-                    var grDir = new GlideRecord('x_snc_movie_data_0_person');
-                    grDir.addQuery('name', oResponse.Director);
-                    grDir.addQuery('role', 'Director');
-                    grDir.query();
-                    // there can only be one...
-                    if (grDir.next()) {
-                        gr_movie.director = grDir.sys_id;
-                    } else {
-                        //... if not, create
-                        grDir.initialize();
-                        grDir.name = oResponse.Director;
-                        grDir.role = 'Director';
-                        var new_dir = grDir.insert();
-                        gr_movie.director = new_dir;
-                    }
+                // extracting
+                gr_movie.year = movie_details.Year;
+                gr_movie.rated = movie_details.Rated;
+                gr_movie.plot = movie_details.Plot + 'provided by flow';
+                gr_movie.genre = movie_details.Genre;
+                gr_movie.imdb_rating = movie_details.imdbRating;
+                gr_movie.setValue('released', movie_dates.Released);
 
-                    // find language
-                    var grLang = new GlideRecord('sys_language');
-                    grLang.addQuery('name', oResponse.Language);
-                    grLang.query();
-                    if (grLang.next()) {
-                        gr_movie.language = grLang.sys_id;
-                    } else {
-                        grLang.initialize();
-                        grLang.name = oResponse.Language;
-                        gr_movie.language = grLang.insert();
-                    }
-
-
-                    // find country
-                    var grCtry = new GlideRecord('core_country');
-                    grCtry.addQuery('name', oResponse.Country);
-                    grCtry.query();
-                    if (grCtry.next()) {
-                        gr_movie.country = grCtry.sys_id;
-                    } else {
-                        grCtry.initialize();
-                        grCtry.name = oResponse.Country;
-                        gr_movie.country = grCtry.insert();
-                    }
-
+                // find director
+                var grDir = new GlideRecord('x_snc_movie_data_0_person');
+                grDir.addQuery('name', movie_details.Director);
+                grDir.addQuery('role', 'Director');
+                grDir.query();
+                // there can only be one...
+                if (grDir.next()) {
+                    gr_movie.director = grDir.sys_id;
                 } else {
-                    gs.info('OMDB did not know this movie');
-                    gr_movie.year = '';
-                    gr_movie.rated = '';
-                    gr_movie.plot = '';
-                    gr_movie.genre = '';
-                    gr_movie.director = '';
-                    gr_movie.language = '';
-                    gr_movie.imdb_rating = '';
-                    gr_movie.country = '';
-                    gr_movie.released = '';
+                    //... if not, create
+                    grDir.initialize();
+                    grDir.name = movie_details.Director;
+                    grDir.role = 'Director';
+                    var new_dir = grDir.insert();
+                    gr_movie.director = new_dir;
                 }
-                gr_movie.update();
+
+                // find language
+                var grLang = new GlideRecord('sys_language');
+                grLang.addQuery('name', movie_details.Language);
+                grLang.query();
+                if (grLang.next()) {
+                    gr_movie.language = grLang.sys_id;
+                } else {
+                    grLang.initialize();
+                    grLang.name = movie_details.Language;
+                    gr_movie.language = grLang.insert();
+                }
+
+
+                // find country
+                var grCtry = new GlideRecord('core_country');
+                grCtry.addQuery('name', movie_details.Country);
+                grCtry.query();
+                if (grCtry.next()) {
+                    gr_movie.country = grCtry.sys_id;
+                } else {
+                    grCtry.initialize();
+                    grCtry.name = movie_details.Country;
+                    gr_movie.country = grCtry.insert();
+                }
 
             } else {
-                gs.error("API Returned an errorcode: " + httpStatus);
+                gs.info('OMDB did not know this movie');
+                gr_movie.year = '';
+                gr_movie.rated = '';
+                gr_movie.plot = '';
+                gr_movie.genre = '';
+                gr_movie.director = '';
+                gr_movie.language = '';
+                gr_movie.imdb_rating = '';
+                gr_movie.country = '';
+                gr_movie.released = '';
             }
+            gr_movie.update();
 
         } catch (ex) {
             var message = ex.message;
@@ -159,13 +135,13 @@ OMDBMovieHelper.prototype = {
         <sys_created_by>daniel.draes</sys_created_by>
         <sys_created_on>2023-06-22 13:21:34</sys_created_on>
         <sys_id>9b0994d61ba32d10c9c10d02604bcba8</sys_id>
-        <sys_mod_count>33</sys_mod_count>
+        <sys_mod_count>44</sys_mod_count>
         <sys_name>OMDBMovieHelper</sys_name>
         <sys_package display_value="Movie Database" source="x_snc_movie_data_0">2fc51cd21ba32d10c9c10d02604bcb4e</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
         <sys_update_name>sys_script_include_9b0994d61ba32d10c9c10d02604bcba8</sys_update_name>
-        <sys_updated_by>daniel.draes</sys_updated_by>
-        <sys_updated_on>2023-07-03 13:28:43</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-21 08:22:16</sys_updated_on>
     </sys_script_include>
 </record_update>

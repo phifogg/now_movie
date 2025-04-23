@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="INSERT_OR_UPDATE">
+        <inactive>false</inactive>
+        <order>100</order>
+        <published_ref/>
+        <question display_value="Movie Title">6c72c2d3db293910cfacbe65f39619e8</question>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-10-03 09:40:56</sys_created_on>
+        <sys_id>d17206d3db293910cfacbe65f3961935</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Dune</sys_name>
+        <sys_package display_value="Movie Database" source="x_snc_movie_data_0">2fc51cd21ba32d10c9c10d02604bcb4e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_update_name>question_choice_d17206d3db293910cfacbe65f3961935</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-10-03 09:40:56</sys_updated_on>
+        <text>Dune</text>
+        <value>Dune</value>
+    </question_choice>
+    <fx_price action="delete_multiple" query="id=d17206d3db293910cfacbe65f3961935"/>
+</record_update>

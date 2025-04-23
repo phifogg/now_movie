@@ -1,0 +1,2818 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=9930000,viewActivatedIn=naturalLanguage</attributes>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category display_value="MovieHelper">6381113fdb59b110cfacbe65f3961949</category>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Retrieves details for a movie record</description>
+        <internal_name>get_omdb_data</internal_name>
+        <label_cache>[{"name":"0f2da7d7-ed37-4260-b6ad-10256c345fc8.sys_language","label":"15 - Find or Create Language➛Sys Language","reference_display":"Sys Language","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"353faa42-c9dd-4b7a-b0ba-61159255455e"}},{"name":"b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Language","label":"1 - Get By Title➛Movie Details➛Language","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"flow_variable.country","label":"Flow Variables➛Country","reference":"core_country","reference_display":"Country","type":"reference","base_type":"reference","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"ba7cf0b5-5499-4f5b-9dc2-1a1d96f70f76"}},{"name":"flow_variable.director","label":"Flow Variables➛Director","reference":"x_snc_movie_data_0_person","reference_display":"Person","type":"reference","base_type":"reference","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"d0a611eb-5bd8-4cd6-8b61-e162d4f3ce2f"}},{"name":"b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Released","label":"1 - Get By Title➛Movie Details➛Released","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.imdbRating","label":"1 - Get By Title➛Movie Details➛imdbRating","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Genre","label":"1 - Get By Title➛Movie Details➛Genre","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Plot","label":"1 - Get By Title➛Movie Details➛Plot","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Rated","label":"1 - Get By Title➛Movie Details➛Rated","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Year","label":"1 - Get By Title➛Movie Details➛Year","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"subflow.movie","label":"Input➛Movie","reference":"x_snc_movie_data_0_movie","reference_display":"Movie","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"6a5acb09-217b-4cc5-8690-6a36d51320c3","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"448d321a-badf-4eda-b7e9-72c8f56f3e3b.record","label":"7 - Create Record➛Person Record","reference":"x_snc_movie_data_0_person","reference_display":"Person","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2120d0fb-b804-4cd4-89e6-5889460acc59.status","label":"3 - Look Up Record➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Error","value":"1","order":0.0},{"label":"Success","value":"0","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"2120d0fb-b804-4cd4-89e6-5889460acc59.Record","label":"3 - Look Up Record➛Person Record","reference":"x_snc_movie_data_0_person","reference_display":"Person","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Director","label":"1 - Get By Title➛Movie Details➛Director","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"b5a3acc9-7293-416b-98e3-1bcd2122cc22.__action_status__.code","label":"1 - Get By Title➛Action Status➛Code","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{}},{"name":"subflow.movie.title","label":"Input➛Movie➛Title","reference":"","reference_display":"Title","type":"string","base_type":"string","parent_table_name":"x_snc_movie_data_0_movie","column_name":"title"},{"name":"b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Country","label":"1 - Get By Title➛Movie Details➛Country","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"b1aa96a7-107c-4a06-a1ec-b3cb9fdfd1fb.status","label":"9 - Look Up Record➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Error","value":"1","order":0.0},{"label":"Success","value":"0","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"b1aa96a7-107c-4a06-a1ec-b3cb9fdfd1fb.Record","label":"9 - Look Up Record➛Country Record","reference":"core_country","reference_display":"Country","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master_snapshot>8f873537db1db110cfacbe65f396198b</master_snapshot>
+        <name>Get OMDB Data</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:08:58</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>71a1113fdb59b110cfacbe65f39619c7</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Get OMDB Data</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Movie Database" source="x_snc_movie_data_0">2fc51cd21ba32d10c9c10d02604bcb4e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_update_name>sys_hub_flow_71a1113fdb59b110cfacbe65f39619c7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:41</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=71a1113fdb59b110cfacbe65f39619c7"/>
+    <sys_variable_value action="delete_multiple" query="document_key=71a1113fdb59b110cfacbe65f39619c7"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=71a1113fdb59b110cfacbe65f39619c7"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=71a1113fdb59b110cfacbe65f39619c7"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=71a1113fdb59b110cfacbe65f39619c7^sys_idNOT IN3da1113fdb59b110cfacbe65f39619c7"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>71a1113fdb59b110cfacbe65f39619c7</id>
+        <name>Get OMDB Data</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:08:58</sys_created_on>
+        <sys_id>3da1113fdb59b110cfacbe65f39619c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:08:58</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=3da1113fdb59b110cfacbe65f39619c7"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=71a1113fdb59b110cfacbe65f39619c7^sys_idNOT IN74545dbfdb59b110cfacbe65f39619c2"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=6a5acb09-217b-4cc5-8690-6a36d51320c3</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>x_snc_movie_data_0_movie</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>movie</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Movie</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Get OMDB Data">71a1113fdb59b110cfacbe65f39619c7</model>
+        <model_id>71a1113fdb59b110cfacbe65f39619c7</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_71a1113fdb59b110cfacbe65f39619c7</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="x_snc_movie_data_0_movie">x_snc_movie_data_0_movie</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:20:39</sys_created_on>
+        <sys_id>74545dbfdb59b110cfacbe65f39619c2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:20:39</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=74545dbfdb59b110cfacbe65f39619c2"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=71a1113fdb59b110cfacbe65f39619c7"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=71a1113fdb59b110cfacbe65f39619c7"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=71a1113fdb59b110cfacbe65f39619c7^sys_idNOT IN33d69973db99b110cfacbe65f3961952,45545dbfdb59b110cfacbe65f39619fe,5c469d33db99b110cfacbe65f39619b9,9d549dbfdb59b110cfacbe65f396193f,ba773137db1db110cfacbe65f39619f9,c1549dbfdb59b110cfacbe65f3961932,e0469d33db99b110cfacbe65f39619c9,ea773137db1db110cfacbe65f39619d5"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Get OMDB Data">71a1113fdb59b110cfacbe65f39619c7</flow>
+        <order>16</order>
+        <parent_ui_id>f37fb58d-bdb9-427e-9fdc-0646de34ca24</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:31:46</sys_created_on>
+        <sys_id>33d69973db99b110cfacbe65f3961952</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 12:07:01</sys_updated_on>
+        <ui_id>08ec1dcc-3b8e-4c5a-9d1c-0d9868eb7f5a</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=33d69973db99b110cfacbe65f3961952"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>33d69973db99b110cfacbe65f3961952</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:31:46</sys_created_on>
+        <sys_id>ffd69973db99b110cfacbe65f3961953</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:31:46</sys_updated_on>
+        <value>x_snc_movie_data_0_movie</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=33d69973db99b110cfacbe65f3961952"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>33d69973db99b110cfacbe65f3961952</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:31:46</sys_created_on>
+        <sys_id>7fd69973db99b110cfacbe65f3961953</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:31:46</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{subflow.movie}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>33d69973db99b110cfacbe65f3961952</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:31:46</sys_created_on>
+        <sys_id>f7d69973db99b110cfacbe65f3961953</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:31:46</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>33d69973db99b110cfacbe65f3961952</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:31:46</sys_created_on>
+        <sys_id>bbd69973db99b110cfacbe65f3961953</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:15</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>year={{b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Year}}^rated={{b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Rated}}^plot={{b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Plot}}^genre={{b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Genre}}^imdb_rating={{b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.imdbRating}}^released={{b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Released}}^director={{flow_variable.director}}^country={{flow_variable.country}}^language={{0f2da7d7-ed37-4260-b6ad-10256c345fc8.sys_language}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=33d69973db99b110cfacbe65f3961952"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=33d69973db99b110cfacbe65f3961952"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Get By Title">d85491a41bd43110c9c10d02604bcb6a</action_type>
+        <action_type_parent display_value="Get By Title">aae01d601bd43110c9c10d02604bcb9c</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Get OMDB Data">71a1113fdb59b110cfacbe65f39619c7</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:20:40</sys_created_on>
+        <sys_id>45545dbfdb59b110cfacbe65f39619fe</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 12:07:01</sys_updated_on>
+        <ui_id>b5a3acc9-7293-416b-98e3-1bcd2122cc22</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=45545dbfdb59b110cfacbe65f39619fe"/>
+    <sys_element_mapping action="delete_multiple" query="id=45545dbfdb59b110cfacbe65f39619fe"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>title</field>
+        <id>45545dbfdb59b110cfacbe65f39619fe</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:20:40</sys_created_on>
+        <sys_id>c5549dbfdb59b110cfacbe65f3961925</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:20:40</sys_updated_on>
+        <table>var__m_sys_hub_action_input_d85491a41bd43110c9c10d02604bcb6a</table>
+        <value>{{subflow.movie.title}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=45545dbfdb59b110cfacbe65f39619fe"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=45545dbfdb59b110cfacbe65f39619fe"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Get OMDB Data">71a1113fdb59b110cfacbe65f39619c7</flow>
+        <order>9</order>
+        <parent_ui_id>f37fb58d-bdb9-427e-9fdc-0646de34ca24</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:29:05</sys_created_on>
+        <sys_id>5c469d33db99b110cfacbe65f39619b9</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 12:07:01</sys_updated_on>
+        <ui_id>b1aa96a7-107c-4a06-a1ec-b3cb9fdfd1fb</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=5c469d33db99b110cfacbe65f39619b9"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>5c469d33db99b110cfacbe65f39619b9</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:29:05</sys_created_on>
+        <sys_id>1c469d33db99b110cfacbe65f39619bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:29:05</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Don't fail on error">ceab42a673110010d70877186bf6a74f</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>5c469d33db99b110cfacbe65f39619b9</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:29:05</sys_created_on>
+        <sys_id>dc469d33db99b110cfacbe65f39619bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:29:05</sys_updated_on>
+        <value>core_country</value>
+        <variable display_value="Table">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=5c469d33db99b110cfacbe65f39619b9"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>5c469d33db99b110cfacbe65f39619b9</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:29:05</sys_created_on>
+        <sys_id>d4469d33db99b110cfacbe65f39619bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:29:05</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>name={{b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Country}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>5c469d33db99b110cfacbe65f39619b9</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:29:05</sys_created_on>
+        <sys_id>98469d33db99b110cfacbe65f39619bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:29:05</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__snc_dont_fail_on_error</field>
+        <id>5c469d33db99b110cfacbe65f39619b9</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:29:05</sys_created_on>
+        <sys_id>14469d33db99b110cfacbe65f39619bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:29:05</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=5c469d33db99b110cfacbe65f39619b9"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=5c469d33db99b110cfacbe65f39619b9"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Get OMDB Data">71a1113fdb59b110cfacbe65f39619c7</flow>
+        <order>7</order>
+        <parent_ui_id>f4445d3d-7a0e-4ff3-a219-d50a17185797</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:20:41</sys_created_on>
+        <sys_id>9d549dbfdb59b110cfacbe65f396193f</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 12:07:01</sys_updated_on>
+        <ui_id>448d321a-badf-4eda-b7e9-72c8f56f3e3b</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=9d549dbfdb59b110cfacbe65f396193f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>9d549dbfdb59b110cfacbe65f396193f</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:20:41</sys_created_on>
+        <sys_id>19549dbfdb59b110cfacbe65f3961941</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:20:41</sys_updated_on>
+        <value>x_snc_movie_data_0_person</value>
+        <variable display_value="Table">61e05916c31332002841b63b12d3aee4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=9d549dbfdb59b110cfacbe65f396193f"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>9d549dbfdb59b110cfacbe65f396193f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:20:41</sys_created_on>
+        <sys_id>d1549dbfdb59b110cfacbe65f3961941</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:20:41</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>9d549dbfdb59b110cfacbe65f396193f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:20:41</sys_created_on>
+        <sys_id>95549dbfdb59b110cfacbe65f3961941</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:20:41</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value>name={{b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Director}}^role=Director</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=9d549dbfdb59b110cfacbe65f396193f"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=9d549dbfdb59b110cfacbe65f396193f"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Get OMDB Data">71a1113fdb59b110cfacbe65f39619c7</flow>
+        <order>18</order>
+        <parent_ui_id>5dc0cc5b-4b65-470e-b5d8-62c554dc868b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:15</sys_created_on>
+        <sys_id>ba773137db1db110cfacbe65f39619f9</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 12:07:01</sys_updated_on>
+        <ui_id>0ece0a1e-cf41-4540-b457-246d151a6a26</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=ba773137db1db110cfacbe65f39619f9"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ba773137db1db110cfacbe65f39619f9</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:15</sys_created_on>
+        <sys_id>ba773137db1db110cfacbe65f39619fb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:15</sys_updated_on>
+        <value>x_snc_movie_data_0_movie</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ba773137db1db110cfacbe65f39619f9</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:15</sys_created_on>
+        <sys_id>f2773137db1db110cfacbe65f39619fb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:15</sys_updated_on>
+        <value>year=^rated=-- None --^plot=^genre=-- None --^imdb_rating=^released=^director=^country=^language=</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=ba773137db1db110cfacbe65f39619f9"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>ba773137db1db110cfacbe65f39619f9</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:15</sys_created_on>
+        <sys_id>72773137db1db110cfacbe65f39619fb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:15</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{subflow.movie}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>ba773137db1db110cfacbe65f39619f9</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:15</sys_created_on>
+        <sys_id>fa773137db1db110cfacbe65f39619fa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:15</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>ba773137db1db110cfacbe65f39619f9</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:15</sys_created_on>
+        <sys_id>be773137db1db110cfacbe65f39619fa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:15</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=ba773137db1db110cfacbe65f39619f9"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=ba773137db1db110cfacbe65f39619f9"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Get OMDB Data">71a1113fdb59b110cfacbe65f39619c7</flow>
+        <order>3</order>
+        <parent_ui_id>f37fb58d-bdb9-427e-9fdc-0646de34ca24</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:20:40</sys_created_on>
+        <sys_id>c1549dbfdb59b110cfacbe65f3961932</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 12:07:01</sys_updated_on>
+        <ui_id>2120d0fb-b804-4cd4-89e6-5889460acc59</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=c1549dbfdb59b110cfacbe65f3961932"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c1549dbfdb59b110cfacbe65f3961932</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:20:41</sys_created_on>
+        <sys_id>09549dbfdb59b110cfacbe65f3961934</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:20:41</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Don't fail on error">ceab42a673110010d70877186bf6a74f</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c1549dbfdb59b110cfacbe65f3961932</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:20:41</sys_created_on>
+        <sys_id>c9549dbfdb59b110cfacbe65f3961934</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:20:41</sys_updated_on>
+        <value>x_snc_movie_data_0_person</value>
+        <variable display_value="Table">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=c1549dbfdb59b110cfacbe65f3961932"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>c1549dbfdb59b110cfacbe65f3961932</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:20:40</sys_created_on>
+        <sys_id>c1549dbfdb59b110cfacbe65f3961934</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:20:40</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>name={{b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Director}}^role=Director</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>c1549dbfdb59b110cfacbe65f3961932</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:20:41</sys_created_on>
+        <sys_id>85549dbfdb59b110cfacbe65f3961934</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:20:41</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__snc_dont_fail_on_error</field>
+        <id>c1549dbfdb59b110cfacbe65f3961932</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:20:40</sys_created_on>
+        <sys_id>01549dbfdb59b110cfacbe65f3961934</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:20:40</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=c1549dbfdb59b110cfacbe65f3961932"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=c1549dbfdb59b110cfacbe65f3961932"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Get OMDB Data">71a1113fdb59b110cfacbe65f39619c7</flow>
+        <order>13</order>
+        <parent_ui_id>92b333ec-082a-4f43-a8c3-9d4889aece25</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:29:06</sys_created_on>
+        <sys_id>e0469d33db99b110cfacbe65f39619c9</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 12:07:01</sys_updated_on>
+        <ui_id>0da908d3-3b96-4363-a164-d8702291723e</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=e0469d33db99b110cfacbe65f39619c9"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>e0469d33db99b110cfacbe65f39619c9</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:29:06</sys_created_on>
+        <sys_id>e4469d33db99b110cfacbe65f39619ca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:29:06</sys_updated_on>
+        <value>core_country</value>
+        <variable display_value="Table">61e05916c31332002841b63b12d3aee4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=e0469d33db99b110cfacbe65f39619c9"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>e0469d33db99b110cfacbe65f39619c9</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:29:06</sys_created_on>
+        <sys_id>a0469d33db99b110cfacbe65f39619ca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:29:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>e0469d33db99b110cfacbe65f39619c9</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:29:06</sys_created_on>
+        <sys_id>64469d33db99b110cfacbe65f39619ca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:29:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value>name={{b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Country}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=e0469d33db99b110cfacbe65f39619c9"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=e0469d33db99b110cfacbe65f39619c9"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Find or Create Language">15f47573db1db110cfacbe65f39619f2</action_type>
+        <action_type_parent display_value="Find or Create Language">4424b133db1db110cfacbe65f39619e2</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Get OMDB Data">71a1113fdb59b110cfacbe65f39619c7</flow>
+        <order>15</order>
+        <parent_ui_id>f37fb58d-bdb9-427e-9fdc-0646de34ca24</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:14</sys_created_on>
+        <sys_id>ea773137db1db110cfacbe65f39619d5</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 12:07:01</sys_updated_on>
+        <ui_id>0f2da7d7-ed37-4260-b6ad-10256c345fc8</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=ea773137db1db110cfacbe65f39619d5"/>
+    <sys_element_mapping action="delete_multiple" query="id=ea773137db1db110cfacbe65f39619d5"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>language</field>
+        <id>ea773137db1db110cfacbe65f39619d5</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:14</sys_created_on>
+        <sys_id>e2773137db1db110cfacbe65f39619d7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_15f47573db1db110cfacbe65f39619f2</table>
+        <value>{{b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Language}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=ea773137db1db110cfacbe65f39619d5"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=ea773137db1db110cfacbe65f39619d5"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=71a1113fdb59b110cfacbe65f39619c7"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=71a1113fdb59b110cfacbe65f39619c7^sys_idNOT IN14469d33db99b110cfacbe65f39619aa,15549dbfdb59b110cfacbe65f3961942,58469d33db99b110cfacbe65f39619bc,60469d33db99b110cfacbe65f39619cb,6a773137db1db110cfacbe65f39619da,8d549dbfdb59b110cfacbe65f3961938,a0469d33db99b110cfacbe65f39619c3,c5549dbfdb59b110cfacbe65f3961935,c9549dbfdb59b110cfacbe65f3961926,d0469d33db99b110cfacbe65f39619c0"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">9c469d33db99b110cfacbe65f39619a9</block>
+        <comment/>
+        <connected_to>81ba5bd4-ef95-4adc-b68a-95ac7ca7b407</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Get OMDB Data">71a1113fdb59b110cfacbe65f39619c7</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>f37fb58d-bdb9-427e-9fdc-0646de34ca24</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:29:05</sys_created_on>
+        <sys_id>14469d33db99b110cfacbe65f39619aa</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:41</sys_updated_on>
+        <ui_id>f4445d3d-7a0e-4ff3-a219-d50a17185797</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=14469d33db99b110cfacbe65f39619aa"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_71a1113fdb59b110cfacbe65f39619c7^id=14469d33db99b110cfacbe65f39619aa"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=14469d33db99b110cfacbe65f39619aa"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=14469d33db99b110cfacbe65f39619aa"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">9d549dbfdb59b110cfacbe65f3961941</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Get OMDB Data">71a1113fdb59b110cfacbe65f39619c7</flow>
+        <flow_variable/>
+        <flow_variable/>
+        <flow_variables_assigned>director</flow_variables_assigned>
+        <inputs/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>8</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>f4445d3d-7a0e-4ff3-a219-d50a17185797</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:20:41</sys_created_on>
+        <sys_id>15549dbfdb59b110cfacbe65f3961942</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:41</sys_updated_on>
+        <ui_id>8d30146f-0ece-4a5c-a3d4-a589f853bf08</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=15549dbfdb59b110cfacbe65f3961942"/>
+    <sys_element_mapping action="delete_multiple" query="id=15549dbfdb59b110cfacbe65f3961942"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>director</field>
+        <id>15549dbfdb59b110cfacbe65f3961942</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:20:41</sys_created_on>
+        <sys_id>99549dbfdb59b110cfacbe65f3961944</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:20:41</sys_updated_on>
+        <table>var__m_sys_hub_flow_variable_71a1113fdb59b110cfacbe65f39619c7</table>
+        <value>{{448d321a-badf-4eda-b7e9-72c8f56f3e3b.record}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=15549dbfdb59b110cfacbe65f3961942"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=15549dbfdb59b110cfacbe65f3961942"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">d0469d33db99b110cfacbe65f39619bc</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Get OMDB Data">71a1113fdb59b110cfacbe65f39619c7</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>10</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>f37fb58d-bdb9-427e-9fdc-0646de34ca24</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:29:05</sys_created_on>
+        <sys_id>58469d33db99b110cfacbe65f39619bc</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:41</sys_updated_on>
+        <ui_id>95548776-a729-4695-9479-d10c94d3a4f0</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=58469d33db99b110cfacbe65f39619bc"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>58469d33db99b110cfacbe65f39619bc</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:29:05</sys_created_on>
+        <sys_id>58469d33db99b110cfacbe65f39619bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:29:05</sys_updated_on>
+        <value>Country does exist</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_71a1113fdb59b110cfacbe65f39619c7^id=58469d33db99b110cfacbe65f39619bc"/>
+    <sys_element_mapping action="delete_multiple" query="id=58469d33db99b110cfacbe65f39619bc"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>58469d33db99b110cfacbe65f39619bc</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:29:05</sys_created_on>
+        <sys_id>d4469d33db99b110cfacbe65f39619bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:29:05</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{b1aa96a7-107c-4a06-a1ec-b3cb9fdfd1fb.status}}=0</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>58469d33db99b110cfacbe65f39619bc</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:29:05</sys_created_on>
+        <sys_id>14469d33db99b110cfacbe65f39619bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:29:05</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=58469d33db99b110cfacbe65f39619bc"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=58469d33db99b110cfacbe65f39619bc"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">e8469d33db99b110cfacbe65f39619ca</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Get OMDB Data">71a1113fdb59b110cfacbe65f39619c7</flow>
+        <flow_variable/>
+        <flow_variable/>
+        <flow_variables_assigned>country</flow_variables_assigned>
+        <inputs/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>14</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>92b333ec-082a-4f43-a8c3-9d4889aece25</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:29:06</sys_created_on>
+        <sys_id>60469d33db99b110cfacbe65f39619cb</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:41</sys_updated_on>
+        <ui_id>2715f515-cf83-4dfb-a11d-f8f0f5b935fe</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=60469d33db99b110cfacbe65f39619cb"/>
+    <sys_element_mapping action="delete_multiple" query="id=60469d33db99b110cfacbe65f39619cb"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>country</field>
+        <id>60469d33db99b110cfacbe65f39619cb</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:29:06</sys_created_on>
+        <sys_id>e4469d33db99b110cfacbe65f39619cd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:29:06</sys_updated_on>
+        <table>var__m_sys_hub_flow_variable_71a1113fdb59b110cfacbe65f39619c7</table>
+        <value>{{b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Country}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=60469d33db99b110cfacbe65f39619cb"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=60469d33db99b110cfacbe65f39619cb"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">ee773137db1db110cfacbe65f39619d9</block>
+        <comment/>
+        <connected_to>f37fb58d-bdb9-427e-9fdc-0646de34ca24</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Get OMDB Data">71a1113fdb59b110cfacbe65f39619c7</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>17</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:15</sys_created_on>
+        <sys_id>6a773137db1db110cfacbe65f39619da</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:41</sys_updated_on>
+        <ui_id>5dc0cc5b-4b65-470e-b5d8-62c554dc868b</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=6a773137db1db110cfacbe65f39619da"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_71a1113fdb59b110cfacbe65f39619c7^id=6a773137db1db110cfacbe65f39619da"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=6a773137db1db110cfacbe65f39619da"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=6a773137db1db110cfacbe65f39619da"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">09549dbfdb59b110cfacbe65f3961938</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Get OMDB Data">71a1113fdb59b110cfacbe65f39619c7</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>f37fb58d-bdb9-427e-9fdc-0646de34ca24</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:20:41</sys_created_on>
+        <sys_id>8d549dbfdb59b110cfacbe65f3961938</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:40</sys_updated_on>
+        <ui_id>81ba5bd4-ef95-4adc-b68a-95ac7ca7b407</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=8d549dbfdb59b110cfacbe65f3961938"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>8d549dbfdb59b110cfacbe65f3961938</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:20:41</sys_created_on>
+        <sys_id>9d549dbfdb59b110cfacbe65f396193b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:29:05</sys_updated_on>
+        <value>Director does exist</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_71a1113fdb59b110cfacbe65f39619c7^id=8d549dbfdb59b110cfacbe65f3961938"/>
+    <sys_element_mapping action="delete_multiple" query="id=8d549dbfdb59b110cfacbe65f3961938"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>8d549dbfdb59b110cfacbe65f3961938</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:20:41</sys_created_on>
+        <sys_id>1d549dbfdb59b110cfacbe65f396193b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:29:05</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{2120d0fb-b804-4cd4-89e6-5889460acc59.status}}=0</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>8d549dbfdb59b110cfacbe65f3961938</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:20:41</sys_created_on>
+        <sys_id>59549dbfdb59b110cfacbe65f396193b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:20:41</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=8d549dbfdb59b110cfacbe65f3961938"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=8d549dbfdb59b110cfacbe65f3961938"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">2c469d33db99b110cfacbe65f39619c2</block>
+        <comment/>
+        <connected_to>95548776-a729-4695-9479-d10c94d3a4f0</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Get OMDB Data">71a1113fdb59b110cfacbe65f39619c7</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>12</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>f37fb58d-bdb9-427e-9fdc-0646de34ca24</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:29:06</sys_created_on>
+        <sys_id>a0469d33db99b110cfacbe65f39619c3</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:41</sys_updated_on>
+        <ui_id>92b333ec-082a-4f43-a8c3-9d4889aece25</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=a0469d33db99b110cfacbe65f39619c3"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_71a1113fdb59b110cfacbe65f39619c7^id=a0469d33db99b110cfacbe65f39619c3"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=a0469d33db99b110cfacbe65f39619c3"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=a0469d33db99b110cfacbe65f39619c3"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">41549dbfdb59b110cfacbe65f3961935</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Get OMDB Data">71a1113fdb59b110cfacbe65f39619c7</flow>
+        <flow_variable/>
+        <flow_variable/>
+        <flow_variables_assigned>director</flow_variables_assigned>
+        <inputs/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>81ba5bd4-ef95-4adc-b68a-95ac7ca7b407</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:20:41</sys_created_on>
+        <sys_id>c5549dbfdb59b110cfacbe65f3961935</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:40</sys_updated_on>
+        <ui_id>9b4479bc-b488-4e6a-9056-feff3c39d48d</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=c5549dbfdb59b110cfacbe65f3961935"/>
+    <sys_element_mapping action="delete_multiple" query="id=c5549dbfdb59b110cfacbe65f3961935"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>director</field>
+        <id>c5549dbfdb59b110cfacbe65f3961935</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:20:41</sys_created_on>
+        <sys_id>c1549dbfdb59b110cfacbe65f3961938</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:20:41</sys_updated_on>
+        <table>var__m_sys_hub_flow_variable_71a1113fdb59b110cfacbe65f39619c7</table>
+        <value>{{2120d0fb-b804-4cd4-89e6-5889460acc59.Record}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=c5549dbfdb59b110cfacbe65f3961935"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=c5549dbfdb59b110cfacbe65f3961935"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">01549dbfdb59b110cfacbe65f3961926</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Get OMDB Data">71a1113fdb59b110cfacbe65f39619c7</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:20:40</sys_created_on>
+        <sys_id>c9549dbfdb59b110cfacbe65f3961926</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:40</sys_updated_on>
+        <ui_id>f37fb58d-bdb9-427e-9fdc-0646de34ca24</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=c9549dbfdb59b110cfacbe65f3961926"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>c9549dbfdb59b110cfacbe65f3961926</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:20:40</sys_created_on>
+        <sys_id>49549dbfdb59b110cfacbe65f396192a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:20:40</sys_updated_on>
+        <value>OMDb Returned success</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_71a1113fdb59b110cfacbe65f39619c7^id=c9549dbfdb59b110cfacbe65f3961926"/>
+    <sys_element_mapping action="delete_multiple" query="id=c9549dbfdb59b110cfacbe65f3961926"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>c9549dbfdb59b110cfacbe65f3961926</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:20:40</sys_created_on>
+        <sys_id>c5549dbfdb59b110cfacbe65f396192a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:20:40</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{b5a3acc9-7293-416b-98e3-1bcd2122cc22.__action_status__.code}}=0</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>c9549dbfdb59b110cfacbe65f3961926</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:20:40</sys_created_on>
+        <sys_id>05549dbfdb59b110cfacbe65f396192a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:20:40</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=c9549dbfdb59b110cfacbe65f3961926"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=c9549dbfdb59b110cfacbe65f3961926"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">5c469d33db99b110cfacbe65f39619bf</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Get OMDB Data">71a1113fdb59b110cfacbe65f39619c7</flow>
+        <flow_variable/>
+        <flow_variable/>
+        <flow_variables_assigned>country</flow_variables_assigned>
+        <inputs/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>11</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>95548776-a729-4695-9479-d10c94d3a4f0</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:29:05</sys_created_on>
+        <sys_id>d0469d33db99b110cfacbe65f39619c0</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:41</sys_updated_on>
+        <ui_id>f6d01456-52ed-4b35-95cf-2a988fb055f5</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=d0469d33db99b110cfacbe65f39619c0"/>
+    <sys_element_mapping action="delete_multiple" query="id=d0469d33db99b110cfacbe65f39619c0"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>country</field>
+        <id>d0469d33db99b110cfacbe65f39619c0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:29:06</sys_created_on>
+        <sys_id>68469d33db99b110cfacbe65f39619c2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:29:06</sys_updated_on>
+        <table>var__m_sys_hub_flow_variable_71a1113fdb59b110cfacbe65f39619c7</table>
+        <value>{{b1aa96a7-107c-4a06-a1ec-b3cb9fdfd1fb.Record}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=d0469d33db99b110cfacbe65f39619c0"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=d0469d33db99b110cfacbe65f39619c0"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=71a1113fdb59b110cfacbe65f39619c7"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=71a1113fdb59b110cfacbe65f39619c7^sys_idNOT IN70545dbfdb59b110cfacbe65f39619cf,f0545dbfdb59b110cfacbe65f39619ca"/>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=ba7cf0b5-5499-4f5b-9dc2-1a1d96f70f76</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>core_country</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>country</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Country</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Get OMDB Data">71a1113fdb59b110cfacbe65f39619c7</model>
+        <model_id>71a1113fdb59b110cfacbe65f39619c7</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_71a1113fdb59b110cfacbe65f39619c7</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="core_country">core_country</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:20:39</sys_created_on>
+        <sys_id>70545dbfdb59b110cfacbe65f39619cf</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:20:40</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=d0a611eb-5bd8-4cd6-8b61-e162d4f3ce2f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>x_snc_movie_data_0_person</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>director</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Director</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Get OMDB Data">71a1113fdb59b110cfacbe65f39619c7</model>
+        <model_id>71a1113fdb59b110cfacbe65f39619c7</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_71a1113fdb59b110cfacbe65f39619c7</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="x_snc_movie_data_0_person">x_snc_movie_data_0_person</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:20:39</sys_created_on>
+        <sys_id>f0545dbfdb59b110cfacbe65f39619ca</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:20:39</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_71a1113fdb59b110cfacbe65f39619c7^sys_idNOT IN34545dbfdb59b110cfacbe65f39619c6"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>movie</element>
+        <help/>
+        <hint/>
+        <label>Movie</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_71a1113fdb59b110cfacbe65f39619c7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 09:20:39</sys_created_on>
+        <sys_id>34545dbfdb59b110cfacbe65f39619c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Movie Database" source="x_snc_movie_data_0">2fc51cd21ba32d10c9c10d02604bcb4e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 09:20:39</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_71a1113fdb59b110cfacbe65f39619c7"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_71a1113fdb59b110cfacbe65f39619c7"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_71a1113fdb59b110cfacbe65f39619c7"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category display_value="MovieHelper">6381113fdb59b110cfacbe65f3961949</category>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Retrieves details for a movie record</description>
+        <internal_name>get_omdb_data</internal_name>
+        <label_cache>[{"name":"0f2da7d7-ed37-4260-b6ad-10256c345fc8.sys_language","label":"15 - Find or Create Language➛Sys Language","reference_display":"Sys Language","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"353faa42-c9dd-4b7a-b0ba-61159255455e"}},{"name":"b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Language","label":"1 - Get By Title➛Movie Details➛Language","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"flow_variable.country","label":"Flow Variables➛Country","reference":"core_country","reference_display":"Country","type":"reference","base_type":"reference","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"ba7cf0b5-5499-4f5b-9dc2-1a1d96f70f76"}},{"name":"flow_variable.director","label":"Flow Variables➛Director","reference":"x_snc_movie_data_0_person","reference_display":"Person","type":"reference","base_type":"reference","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"d0a611eb-5bd8-4cd6-8b61-e162d4f3ce2f"}},{"name":"b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Released","label":"1 - Get By Title➛Movie Details➛Released","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.imdbRating","label":"1 - Get By Title➛Movie Details➛imdbRating","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Genre","label":"1 - Get By Title➛Movie Details➛Genre","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Plot","label":"1 - Get By Title➛Movie Details➛Plot","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Rated","label":"1 - Get By Title➛Movie Details➛Rated","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Year","label":"1 - Get By Title➛Movie Details➛Year","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"subflow.movie","label":"Input➛Movie","reference":"x_snc_movie_data_0_movie","reference_display":"Movie","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"6a5acb09-217b-4cc5-8690-6a36d51320c3","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"448d321a-badf-4eda-b7e9-72c8f56f3e3b.record","label":"7 - Create Record➛Person Record","reference":"x_snc_movie_data_0_person","reference_display":"Person","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2120d0fb-b804-4cd4-89e6-5889460acc59.status","label":"3 - Look Up Record➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Error","value":"1","order":0.0},{"label":"Success","value":"0","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"2120d0fb-b804-4cd4-89e6-5889460acc59.Record","label":"3 - Look Up Record➛Person Record","reference":"x_snc_movie_data_0_person","reference_display":"Person","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Director","label":"1 - Get By Title➛Movie Details➛Director","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"b5a3acc9-7293-416b-98e3-1bcd2122cc22.__action_status__.code","label":"1 - Get By Title➛Action Status➛Code","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{}},{"name":"subflow.movie.title","label":"Input➛Movie➛Title","reference":"","reference_display":"Title","type":"string","base_type":"string","parent_table_name":"x_snc_movie_data_0_movie","column_name":"title"},{"name":"b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Country","label":"1 - Get By Title➛Movie Details➛Country","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"b1aa96a7-107c-4a06-a1ec-b3cb9fdfd1fb.status","label":"9 - Look Up Record➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Error","value":"1","order":0.0},{"label":"Success","value":"0","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"b1aa96a7-107c-4a06-a1ec-b3cb9fdfd1fb.Record","label":"9 - Look Up Record➛Country Record","reference":"core_country","reference_display":"Country","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master>true</master>
+        <name>Get OMDB Data</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Get OMDB Data">71a1113fdb59b110cfacbe65f39619c7</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:32</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8f873537db1db110cfacbe65f396198b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:32</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=8f873537db1db110cfacbe65f396198b"/>
+    <sys_variable_value action="delete_multiple" query="document_key=8f873537db1db110cfacbe65f396198b"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=8f873537db1db110cfacbe65f396198b"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=8f873537db1db110cfacbe65f396198b"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=8f873537db1db110cfacbe65f396198b^sys_idNOT IN0f873537db1db110cfacbe65f396198c"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>8f873537db1db110cfacbe65f396198b</id>
+        <name>Get OMDB Data</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:32</sys_created_on>
+        <sys_id>0f873537db1db110cfacbe65f396198c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:32</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=0f873537db1db110cfacbe65f396198c"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=8f873537db1db110cfacbe65f396198b^sys_idNOT IN03873537db1db110cfacbe65f396198e"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=6a5acb09-217b-4cc5-8690-6a36d51320c3</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>x_snc_movie_data_0_movie</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>movie</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Movie</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Get OMDB Data">8f873537db1db110cfacbe65f396198b</model>
+        <model_id>8f873537db1db110cfacbe65f396198b</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_8f873537db1db110cfacbe65f396198b</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="x_snc_movie_data_0_movie">x_snc_movie_data_0_movie</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:32</sys_created_on>
+        <sys_id>03873537db1db110cfacbe65f396198e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:33</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=03873537db1db110cfacbe65f396198e"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=8f873537db1db110cfacbe65f396198b"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=8f873537db1db110cfacbe65f396198b"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=8f873537db1db110cfacbe65f396198b^sys_idNOT IN23877537db1db110cfacbe65f3961963,2f877537db1db110cfacbe65f396193a,73877537db1db110cfacbe65f3961972,7b877537db1db110cfacbe65f396197e,7f877537db1db110cfacbe65f3961978,af877537db1db110cfacbe65f3961951,e3877537db1db110cfacbe65f396195a,e3877537db1db110cfacbe65f3961969"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Get OMDB Data">8f873537db1db110cfacbe65f396198b</flow>
+        <order>9</order>
+        <parent_ui_id>f37fb58d-bdb9-427e-9fdc-0646de34ca24</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:35</sys_created_on>
+        <sys_id>23877537db1db110cfacbe65f3961963</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:35</sys_updated_on>
+        <ui_id>b1aa96a7-107c-4a06-a1ec-b3cb9fdfd1fb</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=23877537db1db110cfacbe65f3961963"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>23877537db1db110cfacbe65f3961963</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:35</sys_created_on>
+        <sys_id>a3877537db1db110cfacbe65f3961965</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:35</sys_updated_on>
+        <value>core_country</value>
+        <variable display_value="Table">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>23877537db1db110cfacbe65f3961963</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:35</sys_created_on>
+        <sys_id>ef877537db1db110cfacbe65f3961964</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:35</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Don't fail on error">ceab42a673110010d70877186bf6a74f</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=23877537db1db110cfacbe65f3961963"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>23877537db1db110cfacbe65f3961963</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:35</sys_created_on>
+        <sys_id>ab877537db1db110cfacbe65f3961964</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:35</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>name={{b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Country}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>23877537db1db110cfacbe65f3961963</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:35</sys_created_on>
+        <sys_id>6f877537db1db110cfacbe65f3961964</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:35</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__snc_dont_fail_on_error</field>
+        <id>23877537db1db110cfacbe65f3961963</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:35</sys_created_on>
+        <sys_id>e7877537db1db110cfacbe65f3961964</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:35</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=23877537db1db110cfacbe65f3961963"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=23877537db1db110cfacbe65f3961963"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Get By Title">d85491a41bd43110c9c10d02604bcb6a</action_type>
+        <action_type_parent display_value="Get By Title">aae01d601bd43110c9c10d02604bcb9c</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Get OMDB Data">8f873537db1db110cfacbe65f396198b</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:34</sys_created_on>
+        <sys_id>2f877537db1db110cfacbe65f396193a</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:34</sys_updated_on>
+        <ui_id>b5a3acc9-7293-416b-98e3-1bcd2122cc22</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=2f877537db1db110cfacbe65f396193a"/>
+    <sys_element_mapping action="delete_multiple" query="id=2f877537db1db110cfacbe65f396193a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>title</field>
+        <id>2f877537db1db110cfacbe65f396193a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:34</sys_created_on>
+        <sys_id>6f877537db1db110cfacbe65f396193b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:34</sys_updated_on>
+        <table>var__m_sys_hub_action_input_d85491a41bd43110c9c10d02604bcb6a</table>
+        <value>{{subflow.movie.title}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=2f877537db1db110cfacbe65f396193a"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=2f877537db1db110cfacbe65f396193a"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Find or Create Language">15f47573db1db110cfacbe65f39619f2</action_type>
+        <action_type_parent display_value="Find or Create Language">4424b133db1db110cfacbe65f39619e2</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Get OMDB Data">8f873537db1db110cfacbe65f396198b</flow>
+        <order>15</order>
+        <parent_ui_id>f37fb58d-bdb9-427e-9fdc-0646de34ca24</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:35</sys_created_on>
+        <sys_id>73877537db1db110cfacbe65f3961972</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:35</sys_updated_on>
+        <ui_id>0f2da7d7-ed37-4260-b6ad-10256c345fc8</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=73877537db1db110cfacbe65f3961972"/>
+    <sys_element_mapping action="delete_multiple" query="id=73877537db1db110cfacbe65f3961972"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>language</field>
+        <id>73877537db1db110cfacbe65f3961972</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:35</sys_created_on>
+        <sys_id>bf877537db1db110cfacbe65f3961972</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:35</sys_updated_on>
+        <table>var__m_sys_hub_action_input_15f47573db1db110cfacbe65f39619f2</table>
+        <value>{{b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Language}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=73877537db1db110cfacbe65f3961972"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=73877537db1db110cfacbe65f3961972"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Get OMDB Data">8f873537db1db110cfacbe65f396198b</flow>
+        <order>18</order>
+        <parent_ui_id>5dc0cc5b-4b65-470e-b5d8-62c554dc868b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:35</sys_created_on>
+        <sys_id>7b877537db1db110cfacbe65f396197e</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:35</sys_updated_on>
+        <ui_id>0ece0a1e-cf41-4540-b457-246d151a6a26</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=7b877537db1db110cfacbe65f396197e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>7b877537db1db110cfacbe65f396197e</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:36</sys_created_on>
+        <sys_id>77877537db1db110cfacbe65f3961980</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:36</sys_updated_on>
+        <value>x_snc_movie_data_0_movie</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>7b877537db1db110cfacbe65f396197e</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:36</sys_created_on>
+        <sys_id>b3877537db1db110cfacbe65f3961980</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:36</sys_updated_on>
+        <value>year=^rated=-- None --^plot=^genre=-- None --^imdb_rating=^released=^director=^country=^language=</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=7b877537db1db110cfacbe65f396197e"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>7b877537db1db110cfacbe65f396197e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:36</sys_created_on>
+        <sys_id>33877537db1db110cfacbe65f3961980</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:36</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{subflow.movie}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>7b877537db1db110cfacbe65f396197e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:35</sys_created_on>
+        <sys_id>bb877537db1db110cfacbe65f396197f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:35</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>7b877537db1db110cfacbe65f396197e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:36</sys_created_on>
+        <sys_id>7f877537db1db110cfacbe65f396197f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:36</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=7b877537db1db110cfacbe65f396197e"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=7b877537db1db110cfacbe65f396197e"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Get OMDB Data">8f873537db1db110cfacbe65f396198b</flow>
+        <order>16</order>
+        <parent_ui_id>f37fb58d-bdb9-427e-9fdc-0646de34ca24</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:35</sys_created_on>
+        <sys_id>7f877537db1db110cfacbe65f3961978</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:35</sys_updated_on>
+        <ui_id>08ec1dcc-3b8e-4c5a-9d1c-0d9868eb7f5a</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=7f877537db1db110cfacbe65f3961978"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>7f877537db1db110cfacbe65f3961978</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:35</sys_created_on>
+        <sys_id>b7877537db1db110cfacbe65f396197a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:35</sys_updated_on>
+        <value>x_snc_movie_data_0_movie</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=7f877537db1db110cfacbe65f3961978"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>7f877537db1db110cfacbe65f3961978</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:35</sys_created_on>
+        <sys_id>37877537db1db110cfacbe65f396197a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:35</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{subflow.movie}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>7f877537db1db110cfacbe65f3961978</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:35</sys_created_on>
+        <sys_id>bf877537db1db110cfacbe65f3961979</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:35</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>7f877537db1db110cfacbe65f3961978</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:35</sys_created_on>
+        <sys_id>73877537db1db110cfacbe65f396197a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:35</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>year={{b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Year}}^rated={{b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Rated}}^plot={{b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Plot}}^genre={{b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Genre}}^imdb_rating={{b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.imdbRating}}^released={{b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Released}}^director={{flow_variable.director}}^country={{flow_variable.country}}^language={{0f2da7d7-ed37-4260-b6ad-10256c345fc8.sys_language}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=7f877537db1db110cfacbe65f3961978"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=7f877537db1db110cfacbe65f3961978"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Get OMDB Data">8f873537db1db110cfacbe65f396198b</flow>
+        <order>3</order>
+        <parent_ui_id>f37fb58d-bdb9-427e-9fdc-0646de34ca24</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:34</sys_created_on>
+        <sys_id>af877537db1db110cfacbe65f3961951</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:34</sys_updated_on>
+        <ui_id>2120d0fb-b804-4cd4-89e6-5889460acc59</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=af877537db1db110cfacbe65f3961951"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>af877537db1db110cfacbe65f3961951</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:35</sys_created_on>
+        <sys_id>27877537db1db110cfacbe65f3961954</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:35</sys_updated_on>
+        <value>x_snc_movie_data_0_person</value>
+        <variable display_value="Table">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>af877537db1db110cfacbe65f3961951</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:35</sys_created_on>
+        <sys_id>63877537db1db110cfacbe65f3961954</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:35</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Don't fail on error">ceab42a673110010d70877186bf6a74f</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=af877537db1db110cfacbe65f3961951"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>af877537db1db110cfacbe65f3961951</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:35</sys_created_on>
+        <sys_id>2f877537db1db110cfacbe65f3961953</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:35</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>name={{b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Director}}^role=Director</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>af877537db1db110cfacbe65f3961951</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:35</sys_created_on>
+        <sys_id>ef877537db1db110cfacbe65f3961953</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:35</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__snc_dont_fail_on_error</field>
+        <id>af877537db1db110cfacbe65f3961951</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:35</sys_created_on>
+        <sys_id>6b877537db1db110cfacbe65f3961953</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:35</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=af877537db1db110cfacbe65f3961951"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=af877537db1db110cfacbe65f3961951"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Get OMDB Data">8f873537db1db110cfacbe65f396198b</flow>
+        <order>7</order>
+        <parent_ui_id>f4445d3d-7a0e-4ff3-a219-d50a17185797</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:35</sys_created_on>
+        <sys_id>e3877537db1db110cfacbe65f396195a</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:35</sys_updated_on>
+        <ui_id>448d321a-badf-4eda-b7e9-72c8f56f3e3b</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=e3877537db1db110cfacbe65f396195a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>e3877537db1db110cfacbe65f396195a</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:35</sys_created_on>
+        <sys_id>eb877537db1db110cfacbe65f396195b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:35</sys_updated_on>
+        <value>x_snc_movie_data_0_person</value>
+        <variable display_value="Table">61e05916c31332002841b63b12d3aee4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=e3877537db1db110cfacbe65f396195a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>e3877537db1db110cfacbe65f396195a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:35</sys_created_on>
+        <sys_id>a7877537db1db110cfacbe65f396195b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:35</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>e3877537db1db110cfacbe65f396195a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:35</sys_created_on>
+        <sys_id>6b877537db1db110cfacbe65f396195b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:35</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value>name={{b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Director}}^role=Director</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=e3877537db1db110cfacbe65f396195a"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=e3877537db1db110cfacbe65f396195a"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Get OMDB Data">8f873537db1db110cfacbe65f396198b</flow>
+        <order>13</order>
+        <parent_ui_id>92b333ec-082a-4f43-a8c3-9d4889aece25</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:35</sys_created_on>
+        <sys_id>e3877537db1db110cfacbe65f3961969</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:35</sys_updated_on>
+        <ui_id>0da908d3-3b96-4363-a164-d8702291723e</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=e3877537db1db110cfacbe65f3961969"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>e3877537db1db110cfacbe65f3961969</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:35</sys_created_on>
+        <sys_id>e7877537db1db110cfacbe65f396196a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:35</sys_updated_on>
+        <value>core_country</value>
+        <variable display_value="Table">61e05916c31332002841b63b12d3aee4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=e3877537db1db110cfacbe65f3961969"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>e3877537db1db110cfacbe65f3961969</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:35</sys_created_on>
+        <sys_id>a3877537db1db110cfacbe65f396196a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:35</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>e3877537db1db110cfacbe65f3961969</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:35</sys_created_on>
+        <sys_id>67877537db1db110cfacbe65f396196a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:35</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value>name={{b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Country}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=e3877537db1db110cfacbe65f3961969"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=e3877537db1db110cfacbe65f3961969"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=8f873537db1db110cfacbe65f396198b"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=8f873537db1db110cfacbe65f396198b^sys_idNOT IN1b873537db1db110cfacbe65f39619ed,1f873537db1db110cfacbe65f39619f7,1f873537db1db110cfacbe65f39619fa,5f873537db1db110cfacbe65f39619e8,5f873537db1db110cfacbe65f39619f4,9b877537db1db110cfacbe65f3961910,9b877537db1db110cfacbe65f3961913,9f877537db1db110cfacbe65f396190a,9f877537db1db110cfacbe65f396190d,d3873537db1db110cfacbe65f39619f1"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">09549dbfdb59b110cfacbe65f3961938</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Get OMDB Data">8f873537db1db110cfacbe65f396198b</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>f37fb58d-bdb9-427e-9fdc-0646de34ca24</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:33</sys_created_on>
+        <sys_id>1b873537db1db110cfacbe65f39619ed</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:33</sys_updated_on>
+        <ui_id>81ba5bd4-ef95-4adc-b68a-95ac7ca7b407</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=1b873537db1db110cfacbe65f39619ed"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>1b873537db1db110cfacbe65f39619ed</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:33</sys_created_on>
+        <sys_id>1b873537db1db110cfacbe65f39619f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:33</sys_updated_on>
+        <value>Director does exist</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_8f873537db1db110cfacbe65f396198b^id=1b873537db1db110cfacbe65f39619ed"/>
+    <sys_element_mapping action="delete_multiple" query="id=1b873537db1db110cfacbe65f39619ed"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>1b873537db1db110cfacbe65f39619ed</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:33</sys_created_on>
+        <sys_id>97873537db1db110cfacbe65f39619f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:33</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{2120d0fb-b804-4cd4-89e6-5889460acc59.status}}=0</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>1b873537db1db110cfacbe65f39619ed</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:33</sys_created_on>
+        <sys_id>d3873537db1db110cfacbe65f39619f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:33</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=1b873537db1db110cfacbe65f39619ed"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=1b873537db1db110cfacbe65f39619ed"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">9d549dbfdb59b110cfacbe65f3961941</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Get OMDB Data">8f873537db1db110cfacbe65f396198b</flow>
+        <flow_variable/>
+        <flow_variable/>
+        <flow_variables_assigned>director</flow_variables_assigned>
+        <inputs/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>8</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>f4445d3d-7a0e-4ff3-a219-d50a17185797</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:33</sys_created_on>
+        <sys_id>1f873537db1db110cfacbe65f39619f7</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:33</sys_updated_on>
+        <ui_id>8d30146f-0ece-4a5c-a3d4-a589f853bf08</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=1f873537db1db110cfacbe65f39619f7"/>
+    <sys_element_mapping action="delete_multiple" query="id=1f873537db1db110cfacbe65f39619f7"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>director</field>
+        <id>1f873537db1db110cfacbe65f39619f7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:34</sys_created_on>
+        <sys_id>93873537db1db110cfacbe65f39619fa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:34</sys_updated_on>
+        <table>var__m_sys_hub_flow_variable_8f873537db1db110cfacbe65f396198b</table>
+        <value>{{448d321a-badf-4eda-b7e9-72c8f56f3e3b.record}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=1f873537db1db110cfacbe65f39619f7"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=1f873537db1db110cfacbe65f39619f7"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">d0469d33db99b110cfacbe65f39619bc</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Get OMDB Data">8f873537db1db110cfacbe65f396198b</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>10</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>f37fb58d-bdb9-427e-9fdc-0646de34ca24</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:34</sys_created_on>
+        <sys_id>1f873537db1db110cfacbe65f39619fa</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:34</sys_updated_on>
+        <ui_id>95548776-a729-4695-9479-d10c94d3a4f0</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=1f873537db1db110cfacbe65f39619fa"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>1f873537db1db110cfacbe65f39619fa</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:34</sys_created_on>
+        <sys_id>1f873537db1db110cfacbe65f39619fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:34</sys_updated_on>
+        <value>Country does exist</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_8f873537db1db110cfacbe65f396198b^id=1f873537db1db110cfacbe65f39619fa"/>
+    <sys_element_mapping action="delete_multiple" query="id=1f873537db1db110cfacbe65f39619fa"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>1f873537db1db110cfacbe65f39619fa</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:34</sys_created_on>
+        <sys_id>9b873537db1db110cfacbe65f39619fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:34</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{b1aa96a7-107c-4a06-a1ec-b3cb9fdfd1fb.status}}=0</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>1f873537db1db110cfacbe65f39619fa</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:34</sys_created_on>
+        <sys_id>d7873537db1db110cfacbe65f39619fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:34</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=1f873537db1db110cfacbe65f39619fa"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=1f873537db1db110cfacbe65f39619fa"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">01549dbfdb59b110cfacbe65f3961926</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Get OMDB Data">8f873537db1db110cfacbe65f396198b</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:33</sys_created_on>
+        <sys_id>5f873537db1db110cfacbe65f39619e8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:33</sys_updated_on>
+        <ui_id>f37fb58d-bdb9-427e-9fdc-0646de34ca24</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=5f873537db1db110cfacbe65f39619e8"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>5f873537db1db110cfacbe65f39619e8</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:33</sys_created_on>
+        <sys_id>db873537db1db110cfacbe65f39619ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:33</sys_updated_on>
+        <value>OMDb Returned success</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_8f873537db1db110cfacbe65f396198b^id=5f873537db1db110cfacbe65f39619e8"/>
+    <sys_element_mapping action="delete_multiple" query="id=5f873537db1db110cfacbe65f39619e8"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>5f873537db1db110cfacbe65f39619e8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:33</sys_created_on>
+        <sys_id>5b873537db1db110cfacbe65f39619ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:33</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{b5a3acc9-7293-416b-98e3-1bcd2122cc22.__action_status__.code}}=0</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>5f873537db1db110cfacbe65f39619e8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:33</sys_created_on>
+        <sys_id>97873537db1db110cfacbe65f39619ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:33</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=5f873537db1db110cfacbe65f39619e8"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=5f873537db1db110cfacbe65f39619e8"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">9c469d33db99b110cfacbe65f39619a9</block>
+        <comment/>
+        <connected_to>81ba5bd4-ef95-4adc-b68a-95ac7ca7b407</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Get OMDB Data">8f873537db1db110cfacbe65f396198b</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>f37fb58d-bdb9-427e-9fdc-0646de34ca24</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:33</sys_created_on>
+        <sys_id>5f873537db1db110cfacbe65f39619f4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:33</sys_updated_on>
+        <ui_id>f4445d3d-7a0e-4ff3-a219-d50a17185797</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=5f873537db1db110cfacbe65f39619f4"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_8f873537db1db110cfacbe65f396198b^id=5f873537db1db110cfacbe65f39619f4"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=5f873537db1db110cfacbe65f39619f4"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=5f873537db1db110cfacbe65f39619f4"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">e8469d33db99b110cfacbe65f39619ca</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Get OMDB Data">8f873537db1db110cfacbe65f396198b</flow>
+        <flow_variable/>
+        <flow_variable/>
+        <flow_variables_assigned>country</flow_variables_assigned>
+        <inputs/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>14</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>92b333ec-082a-4f43-a8c3-9d4889aece25</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:34</sys_created_on>
+        <sys_id>9b877537db1db110cfacbe65f3961910</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:34</sys_updated_on>
+        <ui_id>2715f515-cf83-4dfb-a11d-f8f0f5b935fe</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=9b877537db1db110cfacbe65f3961910"/>
+    <sys_element_mapping action="delete_multiple" query="id=9b877537db1db110cfacbe65f3961910"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>country</field>
+        <id>9b877537db1db110cfacbe65f3961910</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:34</sys_created_on>
+        <sys_id>13877537db1db110cfacbe65f3961913</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:34</sys_updated_on>
+        <table>var__m_sys_hub_flow_variable_8f873537db1db110cfacbe65f396198b</table>
+        <value>{{b5a3acc9-7293-416b-98e3-1bcd2122cc22.movie_details.Country}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=9b877537db1db110cfacbe65f3961910"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=9b877537db1db110cfacbe65f3961910"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">ee773137db1db110cfacbe65f39619d9</block>
+        <comment/>
+        <connected_to>f37fb58d-bdb9-427e-9fdc-0646de34ca24</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Get OMDB Data">8f873537db1db110cfacbe65f396198b</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>17</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:34</sys_created_on>
+        <sys_id>9b877537db1db110cfacbe65f3961913</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:34</sys_updated_on>
+        <ui_id>5dc0cc5b-4b65-470e-b5d8-62c554dc868b</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=9b877537db1db110cfacbe65f3961913"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_8f873537db1db110cfacbe65f396198b^id=9b877537db1db110cfacbe65f3961913"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=9b877537db1db110cfacbe65f3961913"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=9b877537db1db110cfacbe65f3961913"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">5c469d33db99b110cfacbe65f39619bf</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Get OMDB Data">8f873537db1db110cfacbe65f396198b</flow>
+        <flow_variable/>
+        <flow_variable/>
+        <flow_variables_assigned>country</flow_variables_assigned>
+        <inputs/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>11</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>95548776-a729-4695-9479-d10c94d3a4f0</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:34</sys_created_on>
+        <sys_id>9f877537db1db110cfacbe65f396190a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:34</sys_updated_on>
+        <ui_id>f6d01456-52ed-4b35-95cf-2a988fb055f5</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=9f877537db1db110cfacbe65f396190a"/>
+    <sys_element_mapping action="delete_multiple" query="id=9f877537db1db110cfacbe65f396190a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>country</field>
+        <id>9f877537db1db110cfacbe65f396190a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:34</sys_created_on>
+        <sys_id>17877537db1db110cfacbe65f396190d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:34</sys_updated_on>
+        <table>var__m_sys_hub_flow_variable_8f873537db1db110cfacbe65f396198b</table>
+        <value>{{b1aa96a7-107c-4a06-a1ec-b3cb9fdfd1fb.Record}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=9f877537db1db110cfacbe65f396190a"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=9f877537db1db110cfacbe65f396190a"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">2c469d33db99b110cfacbe65f39619c2</block>
+        <comment/>
+        <connected_to>95548776-a729-4695-9479-d10c94d3a4f0</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Get OMDB Data">8f873537db1db110cfacbe65f396198b</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>12</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>f37fb58d-bdb9-427e-9fdc-0646de34ca24</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:34</sys_created_on>
+        <sys_id>9f877537db1db110cfacbe65f396190d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:34</sys_updated_on>
+        <ui_id>92b333ec-082a-4f43-a8c3-9d4889aece25</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=9f877537db1db110cfacbe65f396190d"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_8f873537db1db110cfacbe65f396198b^id=9f877537db1db110cfacbe65f396190d"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=9f877537db1db110cfacbe65f396190d"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=9f877537db1db110cfacbe65f396190d"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">41549dbfdb59b110cfacbe65f3961935</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Get OMDB Data">8f873537db1db110cfacbe65f396198b</flow>
+        <flow_variable/>
+        <flow_variable/>
+        <flow_variables_assigned>director</flow_variables_assigned>
+        <inputs/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>81ba5bd4-ef95-4adc-b68a-95ac7ca7b407</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:33</sys_created_on>
+        <sys_id>d3873537db1db110cfacbe65f39619f1</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:33</sys_updated_on>
+        <ui_id>9b4479bc-b488-4e6a-9056-feff3c39d48d</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=d3873537db1db110cfacbe65f39619f1"/>
+    <sys_element_mapping action="delete_multiple" query="id=d3873537db1db110cfacbe65f39619f1"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>director</field>
+        <id>d3873537db1db110cfacbe65f39619f1</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:33</sys_created_on>
+        <sys_id>53873537db1db110cfacbe65f39619f4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:33</sys_updated_on>
+        <table>var__m_sys_hub_flow_variable_8f873537db1db110cfacbe65f396198b</table>
+        <value>{{2120d0fb-b804-4cd4-89e6-5889460acc59.Record}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=d3873537db1db110cfacbe65f39619f1"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=d3873537db1db110cfacbe65f39619f1"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=8f873537db1db110cfacbe65f396198b"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=8f873537db1db110cfacbe65f396198b^sys_idNOT IN03873537db1db110cfacbe65f39619d2,db873537db1db110cfacbe65f39619d6"/>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=ba7cf0b5-5499-4f5b-9dc2-1a1d96f70f76</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>core_country</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>country</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Country</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Get OMDB Data">8f873537db1db110cfacbe65f396198b</model>
+        <model_id>8f873537db1db110cfacbe65f396198b</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_variable_8f873537db1db110cfacbe65f396198b</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="core_country">core_country</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:33</sys_created_on>
+        <sys_id>03873537db1db110cfacbe65f39619d2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:33</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=d0a611eb-5bd8-4cd6-8b61-e162d4f3ce2f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>x_snc_movie_data_0_person</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>director</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Director</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Get OMDB Data">8f873537db1db110cfacbe65f396198b</model>
+        <model_id>8f873537db1db110cfacbe65f396198b</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_variable_8f873537db1db110cfacbe65f396198b</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="x_snc_movie_data_0_person">x_snc_movie_data_0_person</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:33</sys_created_on>
+        <sys_id>db873537db1db110cfacbe65f39619d6</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:33</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_8f873537db1db110cfacbe65f396198b^sys_idNOT IN0f873537db1db110cfacbe65f39619bb"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>movie</element>
+        <help/>
+        <hint/>
+        <label>Movie</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_8f873537db1db110cfacbe65f396198b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:33</sys_created_on>
+        <sys_id>0f873537db1db110cfacbe65f39619bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Movie Database" source="x_snc_movie_data_0">2fc51cd21ba32d10c9c10d02604bcb4e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Movie Database">2fc51cd21ba32d10c9c10d02604bcb4e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:33</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_8f873537db1db110cfacbe65f396198b"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_8f873537db1db110cfacbe65f396198b"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_8f873537db1db110cfacbe65f396198b"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>71a1113fdb59b110cfacbe65f39619c7</sys_id>
+        <latest_snapshot>8f873537db1db110cfacbe65f396198b</latest_snapshot>
+        <compiler_build>glide-vancouver-07-06-2023__patch0-07-18-2023_07-26-2023_1029.zip</compiler_build>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=71a1113fdb59b110cfacbe65f39619c7"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=71a1113fdb59b110cfacbe65f39619c7^sys_idNOT INb497b537db1db110cfacbe65f396198c"/>
+    <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_subflow_plan","id":"b497b537db1db110cfacbe65f396198c","name":"plan","plan_signature":null}}</plan>
+        <plan_id display_value="Get OMDB Data">71a1113fdb59b110cfacbe65f39619c7</plan_id>
+        <snapshot>e56abdf7db1db110cfacbe65f39619f9</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-09-22 11:54:40</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b497b537db1db110cfacbe65f396198c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-22 11:54:40</sys_updated_on>
+    </sys_flow_subflow_plan>
+</record_update>
